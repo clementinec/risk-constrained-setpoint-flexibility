@@ -1,0 +1,9 @@
+panel_role,country,city,scenario,scenario_label,time_slice,year_window,selected_weather_year,source_severity,paperb_weather,mean_T_out,CDD18_hourly,max_T_out,hours_temp_ge_35,selector,hot_year_same_as_stress
+typical,China,Guangzhou,ssp585,SSP5-8.5,baseline_2020s,2025-2029,2025,typical,guangzhou_ssp585_baseline_2020s_typical_2025,22.902355,54708.335841,35.866288,7,nearest_median_CDD18_within_time_slice,False
+stress,China,Guangzhou,ssp585,SSP5-8.5,baseline_2020s,2025-2029,2026,heatwave_extreme,guangzhou_ssp585_baseline_2020s_heatwave_extreme_2026,23.213375,54084.447179,35.800724,18,maximum_hours_temp_ge_35_then_max_temp,False
+typical,China,Guangzhou,ssp585,SSP5-8.5,near_2030s,2030-2039,2039,typical,guangzhou_ssp585_near_2030s_typical_2039,23.586146,57982.795143,34.811663,0,nearest_median_CDD18_within_time_slice,False
+stress,China,Guangzhou,ssp585,SSP5-8.5,near_2030s,2030-2039,2033,heatwave_extreme,guangzhou_ssp585_near_2030s_heatwave_extreme_2033,23.934567,60325.235809,35.4307,9,shared_max_CDD18_and_max_hours_temp_ge_35,True
+typical,China,Guangzhou,ssp585,SSP5-8.5,mid_2050s,2050-2059,2050,typical,guangzhou_ssp585_mid_2050s_typical_2050,24.027006,62479.564271,36.017723,41,nearest_median_CDD18_within_time_slice,False
+stress,China,Guangzhou,ssp585,SSP5-8.5,mid_2050s,2050-2059,2059,heatwave_extreme,guangzhou_ssp585_mid_2050s_heatwave_extreme_2059,24.858082,66711.613399,36.188511,72,maximum_hours_temp_ge_35_then_max_temp,False
+typical,China,Guangzhou,ssp585,SSP5-8.5,late_2080s,2080-2089,2087,typical,guangzhou_ssp585_late_2080s_typical_2087,26.621425,79110.158598,37.143297,239,nearest_median_CDD18_within_time_slice,False
+stress,China,Guangzhou,ssp585,SSP5-8.5,late_2080s,2080-2089,2086,heatwave_extreme,guangzhou_ssp585_late_2080s_heatwave_extreme_2086,27.261619,86503.76982,39.137899,904,shared_max_CDD18_and_max_hours_temp_ge_35,True

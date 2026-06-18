@@ -1,0 +1,36 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Do not commit full simulator output directories.
+runs/
+energyplus/
+asset_write/manuscript/
+asset_write/cover_letter_applied_energy.*
+asset_write/editorialmanager_title_abstract_keywords.txt
+results/stress_window_traces/
+*.parquet
+**/eplusout*
+**/*.eso
+**/*.mtr
+**/*.sql
+**/*.err
+**/*.audit
+
+# Local model/cache artifacts.
+models/
+*.joblib
+*.pkl
+
+# LaTeX build outputs.
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.spl
+*.synctex.gz
