@@ -10,7 +10,7 @@ branch and actuator-outcome transitions.
 Interpretive boundary:
 
 * M4 isolates p90-zone versus building-mean aggregation of the same learned
-  probability fields inside the same supervisory architecture.
+  probability fields inside the same supervisory policy.
 * M5 isolates dependence on learned probability variation by replacing every
   probability vector with the frozen neutral signal.  The neutral policy is
   an always-relax structural null, not a contributor-disjoint refit, degraded

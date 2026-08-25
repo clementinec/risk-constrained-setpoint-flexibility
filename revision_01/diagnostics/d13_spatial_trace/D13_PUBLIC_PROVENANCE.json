@@ -1,0 +1,101 @@
+{
+  "schema_version": "paperb_enb_rev01_public_d13_v1",
+  "date": "2026-08-25",
+  "status": "PASS",
+  "scope": "24 accepted learned-p90 retained traces; no EnergyPlus reruns",
+  "source_diagnostic": {
+    "schema_version": "paperb_enb_rev01_d13_spatial_trace_v1",
+    "closure_sha256": "a67946432e725209b3b23a147aec58ddc5388da17c994ae24a2da4eaf816cf7b",
+    "source_script_sha256": "a8d7d220fd7d74fa51b789dc18a1e1287ddaa07049bf3ec6beb185f8e83d3875",
+    "public_portable_script": "scripts/diagnostics/build_d13_spatial_trace.py",
+    "public_portable_script_sha256": "352a94d00081264ff46080918a23457875ecec3631a4997d7a038fd91d8fa414"
+  },
+  "definitions": {
+    "selector": "actual zone nearest linear q=0.90 quantile of 15-zone learned total tail probability; first accepted-zone-order tie break",
+    "contemporaneous_warmest": "maximum zone operative temperature at each occupied timestep; operative=(Ta+Tr)/2",
+    "cumulative_worst_warm_exposure": "scenario-level zone with maximum full-year occupied operative-temperature degree-hours above 28 C; retrospective and not a supervisory input",
+    "switch_opportunity": "adjacent 15-minute trace records with both occupied",
+    "persistence_episode": "maximal adjacent occupied run with unchanged selected-zone identity",
+    "warm_protection": "selected p_tail >= 0.20 and selected d_tail > 0.10"
+  },
+  "external_input_hashes": {
+    "accepted_96_cell_matrix_sha256": "fa03767f0c3d581e65e00ff6149546c44fe3e936608da73ad2f5485bf19895e0",
+    "fresh96_closure_sha256": "b571b9205a51b952852ef1e3abcd0a63d24daf336210b0e63f92e686a48ffcee",
+    "accepted_parent_runner_sha256": "a9693042883ed5c20edad6fcbc757c62c7216d5abc120ad18de1a003932848a4",
+    "parity_closure_sha256": "ca88141bfdf9344bd20ce138eee32f35d88f3f1d38b35d89bcf799710100326f",
+    "parity_trace_sha256": "01d3a8eb138ccf9fd5353c7c90b1b7ad8c56f0f016a5a40d925654893ccd2282"
+  },
+  "coverage": {
+    "scenarios": 24,
+    "cities": 6,
+    "ssp_pathways": 2,
+    "selector_roles": 2,
+    "zones": 15,
+    "trace_rows_per_scenario": 35040,
+    "occupied_rows_per_scenario": 16704,
+    "occupied_rows_total": 400896
+  },
+  "gates": {
+    "accepted_24_anchors_exact": true,
+    "all_24_trace_hashes_exact": true,
+    "all_trace_shapes_exact": true,
+    "all_component_tail_identities_exact": true,
+    "all_warm_branches_reconstructed_exact": true,
+    "parity_all_16704_zone_indices_exact": true,
+    "every_zone_selected_in_every_scenario": true,
+    "source_csv_parquet_pairs_equal": true,
+    "public_csv_files_exact_source_copies": true
+  },
+  "key_findings": {
+    "all_15_zones_selected_in_all_24_scenarios": true,
+    "pooled_modal_zone": "Core_bottom",
+    "pooled_modal_zone_share": 0.1287815293742018,
+    "switches": 237794,
+    "switch_opportunities": 394632,
+    "switch_rate": 0.6025715096596322,
+    "persistence_median_hours": 0.25,
+    "persistence_p90_hours": 0.75,
+    "persistence_max_hours": 7.75,
+    "all_occupied_exact_warmest_share": 0.14145314495530012,
+    "all_occupied_top3_warmest_share": 0.4553874321519796,
+    "all_occupied_cumulative_worst_dh28_zone_share": 0.08205619412515965,
+    "warm_protection_rows": 43295,
+    "warm_protection_exact_warmest_share": 0.20163991223004965,
+    "warm_protection_top3_warmest_share": 0.7679639681256496,
+    "warm_protection_cumulative_worst_dh28_zone_share": 0.1013511952881395
+  },
+  "published_outputs": {
+    "summary_outputs/d13_input_manifest.csv": {
+      "rows": 24,
+      "sha256": "555d8603e515326992fc02da5f94d5762b3db6ed896111ae593d206b293f1ad3"
+    },
+    "summary_outputs/d13_scenario_summary.csv": {
+      "rows": 24,
+      "sha256": "adcb2bffee0d3195e945e6977152f9c68484798ceba027d00bba83ee62cbdd01"
+    },
+    "summary_outputs/d13_group_summary.csv": {
+      "rows": 5,
+      "sha256": "0fc29b4df4efa341588c6feee2d04342f3a62611aaa74f319ea4311772071676"
+    },
+    "summary_outputs/d13_zone_frequency.csv": {
+      "rows": 375,
+      "sha256": "74e1b7494b4213c4412dab3993457d86a8cb5b3006ea05dcafa63e0253379884"
+    },
+    "summary_outputs/d13_reconstruction_validation.csv": {
+      "rows": 1,
+      "sha256": "af08424d55bd6aebefea415a46bee28dff545e9087b9362cd5f6b16712af46d4"
+    },
+    "diagnostics/d13_spatial_trace/D13_SPATIAL_TRACE_REPORT.md": {
+      "rows": 38,
+      "sha256": "d67394f0ca4157d6a012b5efa6dbe66bb5454650e1297f2813fd42a7a76f673a"
+    }
+  },
+  "not_redistributed": [
+    "24 accepted learned-p90 timestep traces",
+    "independent parity timestep trace",
+    "accepted cell-result records and EnergyPlus run directories",
+    "source diagnostic Zstandard-Parquet duplicates",
+    "local-path-bearing review closures"
+  ],
+  "interpretation_boundary": "dynamic, thermally aligned spatial sentinel under synchronized building-level actuation; not direct warmest-zone selection, static retrospective worst-zone selection, or independently zonal actuation"
+}

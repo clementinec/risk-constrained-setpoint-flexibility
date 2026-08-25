@@ -1,0 +1,213 @@
+{
+  "accepted_base_idf_sha256": "1144b58b848992d1730e49ef9c252569e3a515d82a2f99b2c0233352f625a7e4",
+  "batch_id": "REV01-C2-012-20260825-v2",
+  "cities": {
+    "Beijing": {
+      "accepted_base_non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+      "city": "Beijing",
+      "cooling_0p4_db_mwb": {
+        "barometric_pressure_pa": 100941.0,
+        "canonical_fields_sha256": "0ad132c872e531039e12d0f80fbd3f3448d88b9b1e9021da05242931da33e021",
+        "daily_dry_bulb_range_c": 8.9,
+        "day_of_month": 21,
+        "day_type": "SummerDesignDay",
+        "humidity_condition_type": "Wetbulb",
+        "maximum_dry_bulb_c": 34.9,
+        "month": 7,
+        "name": "BEIJING Ann Clg .4% Condns DB=>MWB",
+        "solar_model": "ASHRAETau",
+        "wetbulb_or_dewpoint_at_max_db_c": 22.2,
+        "wind_direction_deg": 180.0,
+        "wind_speed_m_s": 3.4
+      },
+      "design_day_names": [
+        "BEIJING Ann Htg 99.6% Condns DB",
+        "BEIJING Ann Clg .4% Condns DB=>MWB"
+      ],
+      "heating_99p6_db": {
+        "barometric_pressure_pa": 100941.0,
+        "canonical_fields_sha256": "024c50b93697c67ac150178f231e7a16562bf1a94e96e288589e4f22d88475a3",
+        "daily_dry_bulb_range_c": 0.0,
+        "day_of_month": 21,
+        "day_type": "WinterDesignDay",
+        "humidity_condition_type": "Wetbulb",
+        "maximum_dry_bulb_c": -10.8,
+        "month": 1,
+        "name": "BEIJING Ann Htg 99.6% Condns DB",
+        "solar_model": "ASHRAEClearSky",
+        "wetbulb_or_dewpoint_at_max_db_c": -10.8,
+        "wind_direction_deg": 340.0,
+        "wind_speed_m_s": 2.2
+      },
+      "non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+      "raw_ddy_bytes": 28545,
+      "raw_ddy_sha256": "c03c2e56216f793d3c2d17f5dca18bc86d77a9a9b20a93e8b9f96154b79c38f3",
+      "retrieved_utc": "2026-08-25T05:54:56Z",
+      "semantic_diff_gates": {
+        "all_non_design_day_objects_semantically_exact": true,
+        "all_text_outside_three_authorized_spans_byte_exact": true,
+        "exactly_one_base_site_location": true,
+        "exactly_one_derived_site_location": true,
+        "exactly_two_base_design_days": true,
+        "exactly_two_derived_design_days": true,
+        "selected_objects_exact": true,
+        "selected_site_location_exact": true
+      },
+      "site_location": {
+        "canonical_fields_sha256": "a5b90d59582b16f5cf51cbbe7c74adefaaffb0f174b0fd5012f3be5d103d9f11",
+        "elevation_m": 32.0,
+        "keep_site_location_information": null,
+        "latitude_deg": 39.8,
+        "longitude_deg": 116.47,
+        "name": "BEIJING_CHN Design_Conditions",
+        "time_zone_hours": 8.0
+      },
+      "site_location_canonical_sha256": "a5b90d59582b16f5cf51cbbe7c74adefaaffb0f174b0fd5012f3be5d103d9f11",
+      "site_location_name": "BEIJING_CHN Design_Conditions",
+      "source_idf_sha256": "107a06c25259e780ad3eebca065bb4d79b18c3c92d2a314d145fcfb13eeda618",
+      "station": "Beijing IWEC, WMO 545110",
+      "strict_non_design_day_objects_sha256": "1dbd3400b2a8ba8305d0c507536e9061f4a8bba587e67ed71a44677caf2bbd47",
+      "text_outside_authorized_objects_sha256": "99cfc391b8663e1f00602abdb2739110fc857433eb912ac6cdcec11613a5ae0b",
+      "url": "https://energyplus-weather.s3.amazonaws.com/asia_wmo_region_2/CHN/CHN_Beijing.Beijing.545110_IWEC/CHN_Beijing.Beijing.545110_IWEC.ddy"
+    },
+    "Guangzhou": {
+      "accepted_base_non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+      "city": "Guangzhou",
+      "cooling_0p4_db_mwb": {
+        "barometric_pressure_pa": 101229.0,
+        "canonical_fields_sha256": "bb249924e4730fa2cf523c98fcb745adf42f2bafe57b638a7b2d6f7c55c88eb1",
+        "daily_dry_bulb_range_c": 6.9,
+        "day_of_month": 21,
+        "day_type": "SummerDesignDay",
+        "humidity_condition_type": "Wetbulb",
+        "maximum_dry_bulb_c": 35.0,
+        "month": 7,
+        "name": "GUANGZHOU Ann Clg .4% Condns DB=>MWB",
+        "solar_model": "ASHRAETau",
+        "wetbulb_or_dewpoint_at_max_db_c": 26.3,
+        "wind_direction_deg": 160.0,
+        "wind_speed_m_s": 2.4
+      },
+      "design_day_names": [
+        "GUANGZHOU Ann Htg 99.6% Condns DB",
+        "GUANGZHOU Ann Clg .4% Condns DB=>MWB"
+      ],
+      "heating_99p6_db": {
+        "barometric_pressure_pa": 101229.0,
+        "canonical_fields_sha256": "fa1012eb1db7d71c122b2c69802b098c1a68f35b1833be9c2ffd20e30acd166b",
+        "daily_dry_bulb_range_c": 0.0,
+        "day_of_month": 21,
+        "day_type": "WinterDesignDay",
+        "humidity_condition_type": "Wetbulb",
+        "maximum_dry_bulb_c": 5.8,
+        "month": 1,
+        "name": "GUANGZHOU Ann Htg 99.6% Condns DB",
+        "solar_model": "ASHRAEClearSky",
+        "wetbulb_or_dewpoint_at_max_db_c": 5.8,
+        "wind_direction_deg": 0.0,
+        "wind_speed_m_s": 3.0
+      },
+      "non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+      "raw_ddy_bytes": 28614,
+      "raw_ddy_sha256": "a6e1edd6f72729770016e302d6f1bd2293a994db1c6ceac303fb64a749e784b7",
+      "retrieved_utc": "2026-08-25T05:54:57Z",
+      "semantic_diff_gates": {
+        "all_non_design_day_objects_semantically_exact": true,
+        "all_text_outside_three_authorized_spans_byte_exact": true,
+        "exactly_one_base_site_location": true,
+        "exactly_one_derived_site_location": true,
+        "exactly_two_base_design_days": true,
+        "exactly_two_derived_design_days": true,
+        "selected_objects_exact": true,
+        "selected_site_location_exact": true
+      },
+      "site_location": {
+        "canonical_fields_sha256": "fc4caa905abe6ae93c152e28def9bb5a18279dac4eb7ad8e95ee3953f887d6c1",
+        "elevation_m": 8.0,
+        "keep_site_location_information": null,
+        "latitude_deg": 23.13,
+        "longitude_deg": 113.32,
+        "name": "GUANGZHOU_CHN Design_Conditions",
+        "time_zone_hours": 8.0
+      },
+      "site_location_canonical_sha256": "fc4caa905abe6ae93c152e28def9bb5a18279dac4eb7ad8e95ee3953f887d6c1",
+      "site_location_name": "GUANGZHOU_CHN Design_Conditions",
+      "source_idf_sha256": "86aa60a32c938ec933b80fe499abf22b5c2a681dd593b9bcbf642750c09b560e",
+      "station": "Guangzhou IWEC, WMO 592870",
+      "strict_non_design_day_objects_sha256": "1dbd3400b2a8ba8305d0c507536e9061f4a8bba587e67ed71a44677caf2bbd47",
+      "text_outside_authorized_objects_sha256": "99cfc391b8663e1f00602abdb2739110fc857433eb912ac6cdcec11613a5ae0b",
+      "url": "https://energyplus-weather.s3.amazonaws.com/asia_wmo_region_2/CHN/CHN_Guangdong.Guangzhou.592870_IWEC/CHN_Guangdong.Guangzhou.592870_IWEC.ddy"
+    },
+    "Phoenix": {
+      "accepted_base_non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+      "city": "Phoenix",
+      "cooling_0p4_db_mwb": {
+        "barometric_pressure_pa": 97342.0,
+        "canonical_fields_sha256": "2f4d32e009e501e3879b74a33d2b0bee9660917ab54796cea3bdbf05dbffe74f",
+        "daily_dry_bulb_range_c": 12.0,
+        "day_of_month": 21,
+        "day_type": "SummerDesignDay",
+        "humidity_condition_type": "Wetbulb",
+        "maximum_dry_bulb_c": 43.4,
+        "month": 7,
+        "name": "Phoenix Sky Harbor Intl Ap Ann Clg .4% Condns DB=>MWB",
+        "solar_model": "ASHRAETau",
+        "wetbulb_or_dewpoint_at_max_db_c": 21.1,
+        "wind_direction_deg": 260.0,
+        "wind_speed_m_s": 4.1
+      },
+      "design_day_names": [
+        "Phoenix Sky Harbor Intl Ap Ann Htg 99.6% Condns DB",
+        "Phoenix Sky Harbor Intl Ap Ann Clg .4% Condns DB=>MWB"
+      ],
+      "heating_99p6_db": {
+        "barometric_pressure_pa": 97342.0,
+        "canonical_fields_sha256": "e9236bf8654be98bb9e56e0ae6af387ad3a1ab91b4f160f07c6c5938355c52ae",
+        "daily_dry_bulb_range_c": 0.0,
+        "day_of_month": 21,
+        "day_type": "WinterDesignDay",
+        "humidity_condition_type": "Wetbulb",
+        "maximum_dry_bulb_c": 3.7,
+        "month": 12,
+        "name": "Phoenix Sky Harbor Intl Ap Ann Htg 99.6% Condns DB",
+        "solar_model": "ASHRAEClearSky",
+        "wetbulb_or_dewpoint_at_max_db_c": 3.7,
+        "wind_direction_deg": 100.0,
+        "wind_speed_m_s": 1.7
+      },
+      "non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+      "raw_ddy_bytes": 29353,
+      "raw_ddy_sha256": "e16dfb4101f91f50443d639f0d38e346cf4f1eeff954e7e3240fe752dbf4df5c",
+      "retrieved_utc": "2026-08-25T05:54:58Z",
+      "semantic_diff_gates": {
+        "all_non_design_day_objects_semantically_exact": true,
+        "all_text_outside_three_authorized_spans_byte_exact": true,
+        "exactly_one_base_site_location": true,
+        "exactly_one_derived_site_location": true,
+        "exactly_two_base_design_days": true,
+        "exactly_two_derived_design_days": true,
+        "selected_objects_exact": true,
+        "selected_site_location_exact": true
+      },
+      "site_location": {
+        "canonical_fields_sha256": "babfa267ebf40d01f789d92865d42fbfbb00ce36a10340ffadbca5cbfb33fbb4",
+        "elevation_m": 337.0,
+        "keep_site_location_information": null,
+        "latitude_deg": 33.45,
+        "longitude_deg": -111.98,
+        "name": "Phoenix Sky Harbor Intl Ap_AZ_USA Design_Conditions",
+        "time_zone_hours": -7.0
+      },
+      "site_location_canonical_sha256": "babfa267ebf40d01f789d92865d42fbfbb00ce36a10340ffadbca5cbfb33fbb4",
+      "site_location_name": "Phoenix Sky Harbor Intl Ap_AZ_USA Design_Conditions",
+      "source_idf_sha256": "4191de81cba6c3f3b45c0b0a15accd93b9401a75bddb4ae6a44dbd5ef015a90e",
+      "station": "Phoenix Sky Harbor TMY3, WMO 722780",
+      "strict_non_design_day_objects_sha256": "1dbd3400b2a8ba8305d0c507536e9061f4a8bba587e67ed71a44677caf2bbd47",
+      "text_outside_authorized_objects_sha256": "99cfc391b8663e1f00602abdb2739110fc857433eb912ac6cdcec11613a5ae0b",
+      "url": "https://energyplus-weather.s3.amazonaws.com/north_and_central_america_wmo_region_4/USA/AZ/USA_AZ_Phoenix-Sky.Harbor.Intl.AP.722780_TMY3/USA_AZ_Phoenix-Sky.Harbor.Intl.AP.722780_TMY3.ddy"
+    }
+  },
+  "created_utc": "2026-08-25T06:08:38+00:00",
+  "raw_source_contents_published": false,
+  "schema_version": "paperb_enb_rev01_c2_ddy_provenance_v1"
+}

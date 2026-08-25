@@ -1,15 +1,39 @@
 {
-  "schema_version": "paperb_enb_rev01_public_provenance_v2",
+  "schema_version": "paperb_enb_rev01_public_provenance_v4",
   "date": "2026-08-25",
   "scientific_cells": {
-    "planned": 136,
-    "passed": 136,
-    "failed": 0
+    "planned": 148,
+    "passed": 148,
+    "failed": 0,
+    "attribution_and_robustness_cells": {
+      "planned": 136,
+      "passed": 136,
+      "failed": 0
+    },
+    "c2_city_design_condition_cells": {
+      "planned": 12,
+      "passed": 12,
+      "failed": 0
+    }
   },
   "technical_parity_sentinel": {
     "count": 1,
     "status": "PASS",
     "closure_sha256": "ca88141bfdf9344bd20ce138eee32f35d88f3f1d38b35d89bcf799710100326f"
+  },
+  "retained_diagnostics": {
+    "D13": {
+      "status": "PASS",
+      "new_energyplus_cells": 0,
+      "accepted_learned_p90_traces": 24,
+      "occupied_records": 400896,
+      "source_closure_sha256": "a67946432e725209b3b23a147aec58ddc5388da17c994ae24a2da4eaf816cf7b",
+      "input_manifest": "summary_outputs/d13_input_manifest.csv",
+      "public_provenance": "diagnostics/d13_spatial_trace/D13_PUBLIC_PROVENANCE.json",
+      "portable_script": "scripts/diagnostics/build_d13_spatial_trace.py",
+      "raw_traces_redistributed": false,
+      "interpretation_boundary": "dynamic spatial sentinel under synchronized building-level actuation; not direct warmest-zone selection, static retrospective worst-zone selection, or independently zonal actuation"
+    }
   },
   "batches": {
     "rev01_core64": {
@@ -41,17 +65,38 @@
       "variant_manifest_sha256": "2ba95c3fd5a3d46c2bb17e0286868913528526b36f5b2175ce2b37880b4478e2",
       "batch_closure_sha256": "abf5ced68ed5401a5b783eb151574061b760da74c3dbb78c82f93fd4dbaa2676",
       "executed_launcher_sha256": "aeaa76b0294661313bc57657a9980b621775f7f0a47a89ff8f4672d65693c87e"
+    },
+    "REV01-C2-012-20260825-v2": {
+      "experiments": ["C2"],
+      "planned": 12,
+      "passed": 12,
+      "failed": 0,
+      "matrix_sha256": "2f578dc9335b31d2ad7bef9f0f20e6536c1aaedfff2d667abdce0b620250fa97",
+      "public_path_free_matrix_sha256": "68d6a9b2ffbc4a7456b17efad74629e7e214b48563c166b84066c1d0362ba535",
+      "variant_manifest_sha256": "b01b8857958a3a29c82557225de393ed5ebb3066e62056c021e845d78d658ae6",
+      "plan_closure_sha256": "73f402563cdfe8784e3c02012bf6f95f8bd2f642b958aa5b7887a95c91727149",
+      "batch_closure_sha256": "9ce111074c22c0da5c4924369a595a0702ab3b3201ed53b7ecf94e48d0a7e7b8",
+      "freeze_sha256": "150ba8ae1300715a763536e7a0f062be3b59f43da669d5234dc8ddeea2da5b3f",
+      "executed_launcher_sha256": "114d2f9583d3c6e84828c30ca8e1f25e2a8725acb830a2f74dca7c297be56edb",
+      "accepted_denver_comparator_cells_reused": 12
     }
   },
   "frozen_code": {
     "runner_sha256": "4c061fc3b25f7ee6fe66df00cfacfab42f1d3ab171185306fe1ce161a84a0baf",
     "runner_helper_sha256": "b941c0bfc4beb3dc44557ed341bb4e018992620b0d3ad4f3bcb6973558d78bf7",
-    "latest_batch_launcher_sha256": "aeaa76b0294661313bc57657a9980b621775f7f0a47a89ff8f4672d65693c87e",
+    "latest_attribution_batch_launcher_sha256": "aeaa76b0294661313bc57657a9980b621775f7f0a47a89ff8f4672d65693c87e",
+    "c2_batch_launcher_sha256": "114d2f9583d3c6e84828c30ca8e1f25e2a8725acb830a2f74dca7c297be56edb",
+    "c2_plan_compiler_executed_sha256": "17ea69daf330068774f316381220b51ead905d7f053a13586ebbe65ab40eb737",
+    "c2_plan_compiler_public_sanitized_sha256": "3727dddc38825eeba8f60c5759db19e5f9c1b599c649aa9a6d126c7fccc2110f",
     "accepted_output_validator_sha256": "ab7968640f22d91d4ba44c8b0ca874cbdbbfc1c0f2d9700ba2fd95d7ebfe62d0",
     "storage_module_sha256": "b30e96238e8c5c443350c2250fb379a37292ac06caaff98073a4b2bf92b74448",
     "storage_mapping_sha256": "40d8b59cd2f2085bef8aafe16634fe1364c2aa5f317e0e62986c83aca5b65238",
-    "synthesis_script_sha256": "24946fb0adaebbbb59eb5b42cb7c80412e74cf473f5622ac40a5dd260a36412b",
-    "learned_assessment_script_sha256": "e2f364b650db4e513c90117753cfe52fb6f2e2a6c705bb5695345ee5e88a8f1e"
+    "reviewer_synthesis_executed_sha256": "24946fb0adaebbbb59eb5b42cb7c80412e74cf473f5622ac40a5dd260a36412b",
+    "reviewer_synthesis_public_terminology_and_c2_scope_normalized_sha256": "9c68ddd4f3e7b2fbe973dde80dec92f0a1d77484f6338f4060d1e20fcc60a010",
+    "learned_assessment_executed_sha256": "e2f364b650db4e513c90117753cfe52fb6f2e2a6c705bb5695345ee5e88a8f1e",
+    "learned_assessment_public_terminology_normalized_sha256": "a766d1d7f5fda8892c647408a15ab446f6077cadb37bf36cfe073b1358043863",
+    "d13_public_diagnostic_script_sha256": "352a94d00081264ff46080918a23457875ecec3631a4997d7a038fd91d8fa414",
+    "c2_synthesis_script_sha256": "90954d112d665f1c05968c835162bc1049ba63db5b1f9bf41dafb912cbccbc24"
   },
   "external_input_hashes": {
     "accepted_96_cell_matrix_sha256": "fa03767f0c3d581e65e00ff6149546c44fe3e936608da73ad2f5485bf19895e0",
@@ -89,13 +134,18 @@
   "synthesis": {
     "reviewer_evidence_schema": "paperb_enb_rev01_reviewer_synthesis_v2",
     "reviewer_evidence_closure_sha256": "703da705aa821642a91b2ed6cd4fcf3ad45127b09c3a62eee5f1609c2253c0d1",
-    "learned_contribution_assessment_closure_sha256": "3752c320e422aa6aaa95e9708c9c07cc1bd197324ffd19daa5bcd1160a53e5c9"
+    "learned_contribution_assessment_closure_sha256": "3752c320e422aa6aaa95e9708c9c07cc1bd197324ffd19daa5bcd1160a53e5c9",
+    "c2_synthesis_schema": "paperb_enb_rev01_c2_synthesis_v2",
+    "c2_synthesis_closure_sha256": "75293ea75569409e1de7d55f8d56b7f12b36bce735e0752101d5c7a103ead846",
+    "c2_public_provenance": "diagnostics/c2_city_ddy/C2_PUBLIC_PROVENANCE.json",
+    "c2_public_provenance_sha256": "060c28d0807461025e1cb2636df788e77781b98252363796cf9fd3d0b748b43b"
   },
   "not_redistributed": [
     "local-path-bearing run matrices and closures",
     "2025-2100 source forecast tables and source workbooks",
     "EnergyPlus SQL, EIO, and working directories",
-    "timestep traces",
+    "timestep traces (D13 publishes path-relative identities and hashes only)",
+    "raw C2 DDYs and derived/private C2 IDFs",
     "trained predictor binary",
     "third-party thermal-comfort records"
   ]

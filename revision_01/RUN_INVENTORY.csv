@@ -5,4 +5,5 @@ rev01_core64,M3,two learned-signal strength variants on four sentinels,submitted
 rev01_adaptive24,C1,adaptive running mean clamped to 10--33.5 C,unclamped adaptive-band benchmark,24,24,0,14d3075d83d7e688f39677c2f02ed21b083b8a30c08df02b90425f976d524ac9,41df9ca813f09cf0e1736ec82ff4303f3c102abbcaa1bd88707b6f39d2a901c0
 rev01_learned48,M4,building-mean learned tail probabilities,spatial p90 learned-tail policy,24,24,0,c38576e1a0dd70a4df2dd09e033a9bdd70c04f0446929570fd01e9bee14776dd,abf5ced68ed5401a5b783eb151574061b760da74c3dbb78c82f93fd4dbaa2676
 rev01_learned48,M5,neutral probability signal with p90 decision rules,submitted learned-p90 policy,24,24,0,c38576e1a0dd70a4df2dd09e033a9bdd70c04f0446929570fd01e9bee14776dd,abf5ced68ed5401a5b783eb151574061b760da74c3dbb78c82f93fd4dbaa2676
-
+retained_trace_d13,D13,selected-zone identity persistence and thermal concordance,24 accepted learned-p90 traces; no new simulation,0,0,0,fa03767f0c3d581e65e00ff6149546c44fe3e936608da73ad2f5485bf19895e0,a67946432e725209b3b23a147aec58ddc5388da17c994ae24a2da4eaf816cf7b
+REV01-C2-012-20260825-v2,C2,city-matched Site:Location plus annual 99.6% heating and 0.4% cooling design days,accepted Denver sizing contract under identical EPW and policy,12,12,0,2f578dc9335b31d2ad7bef9f0f20e6536c1aaedfff2d667abdce0b620250fa97,9ce111074c22c0da5c4924369a595a0702ab3b3201ed53b7ecf94e48d0a7e7b8

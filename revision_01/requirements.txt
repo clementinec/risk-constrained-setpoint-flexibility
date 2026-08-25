@@ -1,10 +1,9 @@
 numpy
 pandas
 pyarrow
-matplotlib
+matplotlib==3.9.4
 scikit-learn
 lightgbm
 joblib
 pythermalcomfort
 pytest
-

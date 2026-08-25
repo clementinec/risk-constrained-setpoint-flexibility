@@ -1,0 +1,438 @@
+{
+  "parent_runner_sha256": "a9693042883ed5c20edad6fcbc757c62c7216d5abc120ad18de1a003932848a4",
+  "schema_version": "paperb_enb_rev01_variant_manifest_v1",
+  "variants": {
+    "rev01_c2_beijing_adaptive_band": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "city_ddy",
+        "spatial_quantile": 0.9,
+        "strategy": "paperb_adaptive_band_relax",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "accepted_base_non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "city": "Beijing",
+        "design_day_names": [
+          "BEIJING Ann Htg 99.6% Condns DB",
+          "BEIJING Ann Clg .4% Condns DB=>MWB"
+        ],
+        "mode": "city_ddy",
+        "non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "site_location_name": "BEIJING_CHN Design_Conditions",
+        "source_idf_sha256": "107a06c25259e780ad3eebca065bb4d79b18c3c92d2a314d145fcfb13eeda618"
+      },
+      "strategy": "paperb_adaptive_band_relax"
+    },
+    "rev01_c2_beijing_fixed": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "city_ddy",
+        "spatial_quantile": 0.9,
+        "strategy": "diagnostic_reference",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "accepted_base_non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "city": "Beijing",
+        "design_day_names": [
+          "BEIJING Ann Htg 99.6% Condns DB",
+          "BEIJING Ann Clg .4% Condns DB=>MWB"
+        ],
+        "mode": "city_ddy",
+        "non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "site_location_name": "BEIJING_CHN Design_Conditions",
+        "source_idf_sha256": "107a06c25259e780ad3eebca065bb4d79b18c3c92d2a314d145fcfb13eeda618"
+      },
+      "strategy": "diagnostic_reference"
+    },
+    "rev01_c2_beijing_learned_p90": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "city_ddy",
+        "spatial_quantile": 0.9,
+        "strategy": "paperb_p90_tail_asym_relax",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "accepted_base_non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "city": "Beijing",
+        "design_day_names": [
+          "BEIJING Ann Htg 99.6% Condns DB",
+          "BEIJING Ann Clg .4% Condns DB=>MWB"
+        ],
+        "mode": "city_ddy",
+        "non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "site_location_name": "BEIJING_CHN Design_Conditions",
+        "source_idf_sha256": "107a06c25259e780ad3eebca065bb4d79b18c3c92d2a314d145fcfb13eeda618"
+      },
+      "strategy": "paperb_p90_tail_asym_relax"
+    },
+    "rev01_c2_beijing_pmv": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "city_ddy",
+        "spatial_quantile": 0.9,
+        "strategy": "paperb_pmv_relax",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "accepted_base_non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "city": "Beijing",
+        "design_day_names": [
+          "BEIJING Ann Htg 99.6% Condns DB",
+          "BEIJING Ann Clg .4% Condns DB=>MWB"
+        ],
+        "mode": "city_ddy",
+        "non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "site_location_name": "BEIJING_CHN Design_Conditions",
+        "source_idf_sha256": "107a06c25259e780ad3eebca065bb4d79b18c3c92d2a314d145fcfb13eeda618"
+      },
+      "strategy": "paperb_pmv_relax"
+    },
+    "rev01_c2_guangzhou_adaptive_band": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "city_ddy",
+        "spatial_quantile": 0.9,
+        "strategy": "paperb_adaptive_band_relax",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "accepted_base_non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "city": "Guangzhou",
+        "design_day_names": [
+          "GUANGZHOU Ann Htg 99.6% Condns DB",
+          "GUANGZHOU Ann Clg .4% Condns DB=>MWB"
+        ],
+        "mode": "city_ddy",
+        "non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "site_location_name": "GUANGZHOU_CHN Design_Conditions",
+        "source_idf_sha256": "86aa60a32c938ec933b80fe499abf22b5c2a681dd593b9bcbf642750c09b560e"
+      },
+      "strategy": "paperb_adaptive_band_relax"
+    },
+    "rev01_c2_guangzhou_fixed": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "city_ddy",
+        "spatial_quantile": 0.9,
+        "strategy": "diagnostic_reference",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "accepted_base_non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "city": "Guangzhou",
+        "design_day_names": [
+          "GUANGZHOU Ann Htg 99.6% Condns DB",
+          "GUANGZHOU Ann Clg .4% Condns DB=>MWB"
+        ],
+        "mode": "city_ddy",
+        "non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "site_location_name": "GUANGZHOU_CHN Design_Conditions",
+        "source_idf_sha256": "86aa60a32c938ec933b80fe499abf22b5c2a681dd593b9bcbf642750c09b560e"
+      },
+      "strategy": "diagnostic_reference"
+    },
+    "rev01_c2_guangzhou_learned_p90": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "city_ddy",
+        "spatial_quantile": 0.9,
+        "strategy": "paperb_p90_tail_asym_relax",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "accepted_base_non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "city": "Guangzhou",
+        "design_day_names": [
+          "GUANGZHOU Ann Htg 99.6% Condns DB",
+          "GUANGZHOU Ann Clg .4% Condns DB=>MWB"
+        ],
+        "mode": "city_ddy",
+        "non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "site_location_name": "GUANGZHOU_CHN Design_Conditions",
+        "source_idf_sha256": "86aa60a32c938ec933b80fe499abf22b5c2a681dd593b9bcbf642750c09b560e"
+      },
+      "strategy": "paperb_p90_tail_asym_relax"
+    },
+    "rev01_c2_guangzhou_pmv": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "city_ddy",
+        "spatial_quantile": 0.9,
+        "strategy": "paperb_pmv_relax",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "accepted_base_non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "city": "Guangzhou",
+        "design_day_names": [
+          "GUANGZHOU Ann Htg 99.6% Condns DB",
+          "GUANGZHOU Ann Clg .4% Condns DB=>MWB"
+        ],
+        "mode": "city_ddy",
+        "non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "site_location_name": "GUANGZHOU_CHN Design_Conditions",
+        "source_idf_sha256": "86aa60a32c938ec933b80fe499abf22b5c2a681dd593b9bcbf642750c09b560e"
+      },
+      "strategy": "paperb_pmv_relax"
+    },
+    "rev01_c2_phoenix_adaptive_band": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "city_ddy",
+        "spatial_quantile": 0.9,
+        "strategy": "paperb_adaptive_band_relax",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "accepted_base_non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "city": "Phoenix",
+        "design_day_names": [
+          "Phoenix Sky Harbor Intl Ap Ann Htg 99.6% Condns DB",
+          "Phoenix Sky Harbor Intl Ap Ann Clg .4% Condns DB=>MWB"
+        ],
+        "mode": "city_ddy",
+        "non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "site_location_name": "Phoenix Sky Harbor Intl Ap_AZ_USA Design_Conditions",
+        "source_idf_sha256": "4191de81cba6c3f3b45c0b0a15accd93b9401a75bddb4ae6a44dbd5ef015a90e"
+      },
+      "strategy": "paperb_adaptive_band_relax"
+    },
+    "rev01_c2_phoenix_fixed": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "city_ddy",
+        "spatial_quantile": 0.9,
+        "strategy": "diagnostic_reference",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "accepted_base_non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "city": "Phoenix",
+        "design_day_names": [
+          "Phoenix Sky Harbor Intl Ap Ann Htg 99.6% Condns DB",
+          "Phoenix Sky Harbor Intl Ap Ann Clg .4% Condns DB=>MWB"
+        ],
+        "mode": "city_ddy",
+        "non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "site_location_name": "Phoenix Sky Harbor Intl Ap_AZ_USA Design_Conditions",
+        "source_idf_sha256": "4191de81cba6c3f3b45c0b0a15accd93b9401a75bddb4ae6a44dbd5ef015a90e"
+      },
+      "strategy": "diagnostic_reference"
+    },
+    "rev01_c2_phoenix_learned_p90": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "city_ddy",
+        "spatial_quantile": 0.9,
+        "strategy": "paperb_p90_tail_asym_relax",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "accepted_base_non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "city": "Phoenix",
+        "design_day_names": [
+          "Phoenix Sky Harbor Intl Ap Ann Htg 99.6% Condns DB",
+          "Phoenix Sky Harbor Intl Ap Ann Clg .4% Condns DB=>MWB"
+        ],
+        "mode": "city_ddy",
+        "non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "site_location_name": "Phoenix Sky Harbor Intl Ap_AZ_USA Design_Conditions",
+        "source_idf_sha256": "4191de81cba6c3f3b45c0b0a15accd93b9401a75bddb4ae6a44dbd5ef015a90e"
+      },
+      "strategy": "paperb_p90_tail_asym_relax"
+    },
+    "rev01_c2_phoenix_pmv": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "city_ddy",
+        "spatial_quantile": 0.9,
+        "strategy": "paperb_pmv_relax",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "accepted_base_non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "city": "Phoenix",
+        "design_day_names": [
+          "Phoenix Sky Harbor Intl Ap Ann Htg 99.6% Condns DB",
+          "Phoenix Sky Harbor Intl Ap Ann Clg .4% Condns DB=>MWB"
+        ],
+        "mode": "city_ddy",
+        "non_sizing_semantic_sha256": "a821f8394c01fbe0e3f46b0cad1b2436a10753709284ca6ee8ef58d0382d87b9",
+        "site_location_name": "Phoenix Sky Harbor Intl Ap_AZ_USA Design_Conditions",
+        "source_idf_sha256": "4191de81cba6c3f3b45c0b0a15accd93b9401a75bddb4ae6a44dbd5ef015a90e"
+      },
+      "strategy": "paperb_pmv_relax"
+    }
+  }
+}

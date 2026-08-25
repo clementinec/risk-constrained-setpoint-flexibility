@@ -1,0 +1,170 @@
+{
+  "absolute_cell_metric_rows": 24,
+  "accepted_matrix_sha256": "fa03767f0c3d581e65e00ff6149546c44fe3e936608da73ad2f5485bf19895e0",
+  "accepted_outputs_modified": false,
+  "all_gates_passed": true,
+  "annual_occupied_rows_per_cell": 16704,
+  "annual_trace_rows_per_cell": 35040,
+  "batch_closure_path": "paperB_ENB_Rebuild/09_rev01/05_reruns/scientific_runs/rev01_c2_city_ddy12_20260825_v2/BATCH_CLOSURE.json",
+  "batch_closure_sha256": "9ce111074c22c0da5c4924369a595a0702ab3b3201ed53b7ecf94e48d0a7e7b8",
+  "batch_id": "REV01-C2-012-20260825-v2",
+  "c2_outputs_modified": false,
+  "capacity_policy_invariance_passed": true,
+  "cell_index_sha256": "edff8f9e640f7b5806baa593254e007a818d1b915bf290ffce0fdea84d315fa1",
+  "created_utc": "2026-08-25T06:42:41+00:00",
+  "differential_of_contrast_rows": 12,
+  "energyplus_invocations": 0,
+  "event_window_occupied_rows_per_cell": 640,
+  "event_window_rows_per_cell": 1344,
+  "freeze_sha256": "150ba8ae1300715a763536e7a0f062be3b59f43da669d5234dc8ddeea2da5b3f",
+  "input_artifacts": 144,
+  "interpretation_limits": [
+    "Representative current city-design-condition sensitivity only.",
+    "Not future-climate resizing or proof of component saturation.",
+    "NaturalGas:Facility includes service-water heating.",
+    "Operative-temperature degree-hours are descriptive physical exposure diagnostics."
+  ],
+  "matched_sizing_contract_rows": 12,
+  "matrix_sha256": "2f578dc9335b31d2ad7bef9f0f20e6536c1aaedfff2d667abdce0b620250fa97",
+  "output_manifest": {
+    "SYNTHESIS_REPORT.md": {
+      "bytes": 17167,
+      "sha256": "2e26a8e1265aa10fc7731ef18e33211fc07ba1477c440ee7720bbaec3a7cfbe1"
+    },
+    "capacity_tabular.parquet": {
+      "bytes": 46910,
+      "sha256": "2db7c38664044587f9a09fb20553d7e675463fdf876d515a26704c24d4d8b559"
+    },
+    "cell_metrics.csv": {
+      "bytes": 19661,
+      "sha256": "723f0380f40946e7232506ce3cdbd5c99295b28f74f8f09bdc1835ca97e5f47c"
+    },
+    "cell_metrics.parquet": {
+      "bytes": 52426,
+      "sha256": "1fc06513ce1b6c56dba4c3880670ebc675dd0516a0b980db19018ae75bd84ef0"
+    },
+    "component_sizes.parquet": {
+      "bytes": 22807,
+      "sha256": "e380681689f831ace7fae6f3e4be173c224a3441f1a23c744b98803aa673e008"
+    },
+    "differential_of_contrasts.csv": {
+      "bytes": 28291,
+      "sha256": "42dabb3896ebac5e754dff44553dd94f327bbba0c8752cd5f29e9ed53de51329"
+    },
+    "differential_of_contrasts.parquet": {
+      "bytes": 207398,
+      "sha256": "508ca2015aa2bfae6342567cd7427e71da2f6cc5ab43494902e23a6f56f58031"
+    },
+    "input_artifact_manifest.csv": {
+      "bytes": 65825,
+      "sha256": "3f5291126cd9063529f28e1ef9f4ea056e0d8def4f8a6f41f45ad764bc0e3cbf"
+    },
+    "input_artifact_manifest.parquet": {
+      "bytes": 18718,
+      "sha256": "9b49e1f72f9ba39776b62a822845126df7faf929ecc6444a3ff276f385422b35"
+    },
+    "matched_city_ddy_minus_denver.csv": {
+      "bytes": 28217,
+      "sha256": "0c8c660e58b831c4f2bc7d25ba7cacf1e1af7f6ada704298b7431794dffb53aa"
+    },
+    "matched_city_ddy_minus_denver.parquet": {
+      "bytes": 144216,
+      "sha256": "8db71d645fa796163a449719836795556e5707e028df0917f5f0a358577cce86"
+    },
+    "policy_ranking_stability.csv": {
+      "bytes": 19459,
+      "sha256": "0ada193f3172492350713250ca3a00ed24fb2c261c3ddc8782a7ef66f26614e8"
+    },
+    "policy_ranking_stability.parquet": {
+      "bytes": 11473,
+      "sha256": "f45b495f2bd86557c794afeae8ad66e72ad386f71618fe46ab274f4cf6cae389"
+    },
+    "policy_rankings.csv": {
+      "bytes": 27546,
+      "sha256": "7fb68b1bb1c706f405417837108b18b5ec6830134536ea3918dd43e6618113ba"
+    },
+    "policy_rankings.parquet": {
+      "bytes": 7018,
+      "sha256": "c2aa1528183a9031e8fd42a0f05165df37176073bce2ee921454d8a8ab45059c"
+    },
+    "unmet_tabular.parquet": {
+      "bytes": 44720,
+      "sha256": "65188159373a19e98dd7126d26f54ee8abf11b74ce19b546040f7350d2ea11e3"
+    },
+    "within_contract_policy_minus_fixed.csv": {
+      "bytes": 37690,
+      "sha256": "aced1cacf930576f1b011f6e132766fec9519183a978863eb19a3c2195343bc3"
+    },
+    "within_contract_policy_minus_fixed.parquet": {
+      "bytes": 142337,
+      "sha256": "fcd97a0776bc34750ac775aed1abeeab11f53e99af8ada1518aad0fafc5459bf"
+    },
+    "zone_system_sizes.parquet": {
+      "bytes": 31228,
+      "sha256": "8d1ab1d6893e35015f0ebe423d2613c6a39d4029e2d66650da698f439dcbda13"
+    }
+  },
+  "plan_closure_sha256": "73f402563cdfe8784e3c02012bf6f95f8bd2f642b958aa5b7887a95c91727149",
+  "predeclared_numeric_endpoints": [
+    "annual_electricity_kwh_delivered",
+    "annual_natural_gas_kwh_delivered_including_service_water",
+    "annual_total_delivered_site_energy_kwh",
+    "extreme_336h_electricity_kwh_delivered",
+    "extreme_336h_natural_gas_kwh_delivered_including_service_water",
+    "extreme_336h_total_delivered_site_energy_kwh",
+    "annual_occupied_worst_zone_degree_hours_above_26c",
+    "annual_occupied_worst_zone_degree_hours_above_28c",
+    "annual_occupied_worst_zone_degree_hours_above_30c",
+    "extreme_336h_occupied_worst_zone_degree_hours_above_26c",
+    "extreme_336h_occupied_worst_zone_degree_hours_above_28c",
+    "extreme_336h_occupied_worst_zone_degree_hours_above_30c",
+    "dx_high_speed_cooling_capacity_w",
+    "fuel_heating_capacity_w",
+    "electric_reheat_capacity_w",
+    "combined_fuel_plus_reheat_capacity_w",
+    "dx_high_speed_rated_airflow_m3_s",
+    "zone_cooling_user_design_load_w_sum",
+    "zone_cooling_user_design_flow_m3_s_sum",
+    "zone_heating_user_design_load_w_sum",
+    "zone_heating_user_design_flow_m3_s_sum",
+    "system_cooling_user_design_capacity_w_sum",
+    "system_cooling_user_design_flow_m3_s_sum",
+    "system_heating_user_design_capacity_w_sum",
+    "system_heating_user_design_flow_m3_s_sum",
+    "facility_occupied_heating_setpoint_not_met_h",
+    "facility_occupied_cooling_setpoint_not_met_h",
+    "cooling_unmet_degree_hours_sum",
+    "heating_unmet_degree_hours_sum",
+    "cooling_occupied_unmet_degree_hours_sum",
+    "heating_occupied_unmet_degree_hours_sum",
+    "cooling_occupied_unmet_degree_hours_max_zone",
+    "heating_occupied_unmet_degree_hours_max_zone"
+  ],
+  "predeclared_ranking_endpoints": [
+    "annual_total_delivered_site_energy_kwh",
+    "extreme_336h_total_delivered_site_energy_kwh",
+    "annual_occupied_worst_zone_degree_hours_above_26c",
+    "annual_occupied_worst_zone_degree_hours_above_28c",
+    "annual_occupied_worst_zone_degree_hours_above_30c",
+    "extreme_336h_occupied_worst_zone_degree_hours_above_26c",
+    "extreme_336h_occupied_worst_zone_degree_hours_above_28c",
+    "extreme_336h_occupied_worst_zone_degree_hours_above_30c",
+    "facility_occupied_cooling_setpoint_not_met_h",
+    "facility_occupied_heating_setpoint_not_met_h",
+    "cooling_occupied_unmet_degree_hours_sum",
+    "heating_occupied_unmet_degree_hours_sum"
+  ],
+  "public_manifest_paths_are_workspace_relative": true,
+  "ranking_rows": 288,
+  "ranking_stability_rows": 144,
+  "raw_source_ddys_published": false,
+  "schema_version": "paperb_enb_rev01_c2_synthesis_v2",
+  "script_path": "paperB_ENB_Rebuild/09_rev01/06_synthesis/synthesize_c2_city_ddy.py",
+  "script_sha256": "90954d112d665f1c05968c835162bc1049ba63db5b1f9bf41dafb912cbccbc24",
+  "sql_tabular_unit_contract_passed": true,
+  "status": "PASS",
+  "trace_calendar_continuity_passed": true,
+  "trace_sql_facility_meter_reconciliation_passed": true,
+  "variant_manifest_sha256": "b01b8857958a3a29c82557225de393ed5ebb3066e62056c021e845d78d658ae6",
+  "within_contract_policy_contrast_rows": 24
+}

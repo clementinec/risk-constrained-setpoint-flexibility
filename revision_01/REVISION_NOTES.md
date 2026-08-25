@@ -7,7 +7,10 @@ Date: 2026-08-25
 - Core attribution and parameter batch: 64/64 PASS (M1: 24; M2: 32; M3: 8).
 - Adaptive running-mean clamp batch: 24/24 PASS (C1).
 - Full-grid learned-contribution batch: 48/48 PASS (M4: 24; M5: 24).
-- Total scientific coverage: 136/136 PASS, with zero failed cells.
+- City-design-condition sizing sensitivity: 12/12 PASS (C2), using three
+  representative cities and all four primary policies.
+- Total scientific coverage: 148/148 PASS, comprising 136 attribution/robustness
+  cells plus 12 C2 sizing-sensitivity cells, with zero failed cells.
 - Separate submitted-settings annual parity sentinel: PASS.
 - Exact selected-weather archive: 24/24 native EPWs published with matching
   accepted-run SHA-256 values, path-free selector metadata, recovered source
@@ -19,9 +22,15 @@ Date: 2026-08-25
 - Common-scale annual thermal diagnostic D07: 72/72 primary annual contrasts
   reproduced the published three-comparator means and generated the packaged
   supplemental PDF from inspectable CSV source data.
-- City-specific design-day sensitivity C2: not run. The retained panel did not
-  provide simultaneous component-binding evidence or authoritative city-specific
-  design-day files sufficient to authorize the predeclared sensitivity.
+- Spatial-sentinel trace diagnostic D13: all 24 hash-pinned learned-p90 traces and
+  400,896 occupied records passed selector, trace-shape, learned-tail-identity,
+  warm-branch, and parity-reconstruction gates. D13 reuses accepted outputs and
+  adds no EnergyPlus run; raw traces remain outside the public addendum.
+- City-design-condition sensitivity C2: 12/12 cells passed the frozen plan,
+  execution, runtime-location/design-day, output, and postprocessing gates. The
+  12 accepted-Denver comparators were reused as hash-pinned evidence and were not
+  counted as new runs. Raw DDYs, derived IDFs, SQL/EIO, and traces remain outside
+  the public addendum; path-free provenance and processed tables are packaged.
 
 ## Main attribution findings
 
@@ -92,17 +101,43 @@ manuscript-facing learned-p90-minus-alternative convention for M4/M5.
    horizontal scale; the CSV source and portable plotting script are packaged
    alongside the PDF.
 
+9. **The learned-p90 spatial sentinel was dynamic and thermally aligned during
+   protection without being a warmest-zone rule.** Every one of the 15 zones was
+   selected in every scenario, and selected identity changed in 237,794 of
+   394,632 adjacent occupied pairs (60.26%). During 43,295 warm-protection
+   requests, the selected sentinel was among the three warmest zones in 76.80%
+   of records, but it was exactly warmest in 20.16% and matched the scenario's
+   retrospective worst-DH>28 zone in 10.14%.
+
+10. **Annual policy conclusions were robust to the representative C2 sizing
+    substitution, whereas event-window thermal rankings were more sensitive.**
+    Across the nine active-policy city comparisons, changing from the accepted
+    Denver design-day contract to the city-matched design-condition contract
+    changed 0/9 directions for policy-minus-fixed annual delivered site energy
+    and 0/9 for annual degree-hours above 28 C. It changed 5/9 directions for
+    the 336-hour degree-hours-above-28 C contrast, and 49 of 144 within-city
+    policy ranks changed across all declared ranking endpoints. The capacities
+    and hot-climate absolute warm-side outcomes changed materially, so C2
+    strengthens the annual headline while identifying a real sizing dependence
+    in short-window thermal interpretation.
+
 ## Interpretation boundaries
 
 - M1 isolates spatial aggregation within the PMV comparator. M4 isolates spatial
   aggregation within the learned probability signal. M5 is a structural signal
   null. None alone identifies a pure AI effect.
-- The selected zone remains a spatial sentinel driving synchronized building-
-  level actuation; these tests do not evaluate independently actuated zones.
+- D13 characterizes a dynamic spatial sentinel driving synchronized building-
+  level actuation. It does not test independently actuated zones, and its thermal
+  concordance must not be relabeled as direct warmest-zone or static retrospective
+  worst-zone selection.
 - Contributor-disjoint predictor performance remains the relevant transfer
   limitation. M3/M5 test supervisory-policy dependence and do not substitute for
   occupant-transfer validation, personalization, or online adaptation.
 - Direction counts and scenario distributions should accompany means because
   small aggregate >28 C differences can be driven by a small number of cases.
-- The results apply to the tested Medium Office prototype, zoning, HVAC topology,
-  Denver sizing contract, and weather lineage.
+- The primary results apply to the tested Medium Office prototype, zoning, HVAC
+  topology, accepted Denver sizing contract, and weather lineage. C2 establishes
+  representative current city-design-condition sensitivity for Beijing,
+  Guangzhou, and Phoenix under the same building, policies, and EPWs; it is not
+  an additional building/HVAC/GCM test, future-climate resizing experiment, or
+  proof of simultaneous component saturation.

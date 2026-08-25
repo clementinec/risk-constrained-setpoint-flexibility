@@ -1,0 +1,73 @@
+{
+  "schema_version": "paperb_enb_rev01_c2_public_provenance_v1",
+  "date": "2026-08-25",
+  "status": "PASS",
+  "batch_id": "REV01-C2-012-20260825-v2",
+  "scientific_cells": {
+    "planned": 12,
+    "passed": 12,
+    "failed": 0,
+    "accepted_denver_comparator_cells_reused": 12
+  },
+  "source_closure_hashes": {
+    "plan_closure_sha256": "73f402563cdfe8784e3c02012bf6f95f8bd2f642b958aa5b7887a95c91727149",
+    "batch_closure_sha256": "9ce111074c22c0da5c4924369a595a0702ab3b3201ed53b7ecf94e48d0a7e7b8",
+    "freeze_sha256": "150ba8ae1300715a763536e7a0f062be3b59f43da669d5234dc8ddeea2da5b3f",
+    "cell_index_sha256": "edff8f9e640f7b5806baa593254e007a818d1b915bf290ffce0fdea84d315fa1",
+    "scientific_synthesis_closure_sha256": "75293ea75569409e1de7d55f8d56b7f12b36bce735e0752101d5c7a103ead846"
+  },
+  "frozen_bindings": {
+    "private_matrix_sha256": "2f578dc9335b31d2ad7bef9f0f20e6536c1aaedfff2d667abdce0b620250fa97",
+    "public_path_free_matrix_sha256": "68d6a9b2ffbc4a7456b17efad74629e7e214b48563c166b84066c1d0362ba535",
+    "variant_manifest_sha256": "b01b8857958a3a29c82557225de393ed5ebb3066e62056c021e845d78d658ae6",
+    "accepted_96_cell_matrix_sha256": "fa03767f0c3d581e65e00ff6149546c44fe3e936608da73ad2f5485bf19895e0",
+    "accepted_medium_office_idf_sha256": "1144b58b848992d1730e49ef9c252569e3a515d82a2f99b2c0233352f625a7e4",
+    "trained_predictor_sha256": "6fbeb06644a36b226b17824a1fca7526bd518e0a9b76a41f878fb1c27efcd619"
+  },
+  "executed_code_hashes": {
+    "plan_compiler_sha256": "17ea69daf330068774f316381220b51ead905d7f053a13586ebbe65ab40eb737",
+    "batch_launcher_sha256": "114d2f9583d3c6e84828c30ca8e1f25e2a8725acb830a2f74dca7c297be56edb",
+    "synthesizer_sha256": "90954d112d665f1c05968c835162bc1049ba63db5b1f9bf41dafb912cbccbc24"
+  },
+  "public_code_hashes": {
+    "scripts/automation/compile_c2_city_ddy_plan.py": "3727dddc38825eeba8f60c5759db19e5f9c1b599c649aa9a6d126c7fccc2110f",
+    "scripts/automation/run_c2_city_ddy_batch.py": "114d2f9583d3c6e84828c30ca8e1f25e2a8725acb830a2f74dca7c297be56edb",
+    "scripts/synthesis/synthesize_c2_city_ddy.py": "90954d112d665f1c05968c835162bc1049ba63db5b1f9bf41dafb912cbccbc24"
+  },
+  "public_output_hashes": {
+    "summary_outputs/c2_cell_metrics.csv": "723f0380f40946e7232506ce3cdbd5c99295b28f74f8f09bdc1835ca97e5f47c",
+    "summary_outputs/c2_matched_city_ddy_minus_denver.csv": "0c8c660e58b831c4f2bc7d25ba7cacf1e1af7f6ada704298b7431794dffb53aa",
+    "summary_outputs/c2_within_contract_policy_minus_fixed.csv": "aced1cacf930576f1b011f6e132766fec9519183a978863eb19a3c2195343bc3",
+    "summary_outputs/c2_differential_of_contrasts.csv": "42dabb3896ebac5e754dff44553dd94f327bbba0c8752cd5f29e9ed53de51329",
+    "summary_outputs/c2_policy_rankings.csv": "7fb68b1bb1c706f405417837108b18b5ec6830134536ea3918dd43e6618113ba",
+    "summary_outputs/c2_policy_ranking_stability.csv": "0ada193f3172492350713250ca3a00ed24fb2c261c3ddc8782a7ef66f26614e8",
+    "diagnostics/c2_city_ddy/C2_SYNTHESIS_REPORT.md": "2e26a8e1265aa10fc7731ef18e33211fc07ba1477c440ee7720bbaec3a7cfbe1",
+    "diagnostics/c2_city_ddy/C2_SYNTHESIS_CLOSURE.json": "75293ea75569409e1de7d55f8d56b7f12b36bce735e0752101d5c7a103ead846",
+    "diagnostics/c2_city_ddy/C2_DDY_PROVENANCE.json": "41bf8ed8da5f48a02ad949e3efb827c82511c1a739485208cd1fef4b9dd61b12"
+  },
+  "scientific_gates": {
+    "all_12_cells_final_validated": true,
+    "accepted_comparator_evidence_unchanged": true,
+    "c2_runtime_location_and_design_day_contracts_validated": true,
+    "capacity_policy_invariance_passed": true,
+    "trace_calendar_continuity_passed": true,
+    "trace_sql_facility_meter_reconciliation_passed": true,
+    "sql_tabular_unit_contract_passed": true,
+    "energyplus_invocations_during_synthesis": 0
+  },
+  "results": {
+    "annual_site_energy_policy_minus_fixed_direction_changes": "0/9",
+    "annual_degree_hours_above_28c_policy_minus_fixed_direction_changes": "0/9",
+    "extreme_336h_degree_hours_above_28c_policy_minus_fixed_direction_changes": "5/9",
+    "policy_rank_changes": "49/144"
+  },
+  "not_redistributed": [
+    "raw DDY payloads",
+    "derived or private IDFs",
+    "local-path-bearing execution matrices, plan closures, batch closures, and freezes",
+    "EnergyPlus SQL, EIO, error logs, and working directories",
+    "timestep traces and raw cell outputs",
+    "third-party licensed input payloads"
+  ],
+  "interpretation_boundary": "Representative current city-design-condition sensitivity only; not future-climate resizing, additional-building/HVAC/GCM validation, or proof of simultaneous component saturation."
+}

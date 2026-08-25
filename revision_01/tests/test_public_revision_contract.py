@@ -21,6 +21,15 @@ helper = importlib.util.module_from_spec(SPEC)
 sys.modules[SPEC.name] = helper
 SPEC.loader.exec_module(helper)
 
+D13_PATH = ROOT / "scripts/diagnostics/build_d13_spatial_trace.py"
+D13_SPEC = importlib.util.spec_from_file_location(
+    "build_d13_spatial_trace_public_test", D13_PATH
+)
+assert D13_SPEC is not None and D13_SPEC.loader is not None
+d13 = importlib.util.module_from_spec(D13_SPEC)
+sys.modules[D13_SPEC.name] = d13
+D13_SPEC.loader.exec_module(d13)
+
 
 def test_probability_attenuation_endpoints_and_mass() -> None:
     probabilities = np.array(
@@ -68,9 +77,21 @@ def test_public_manifests_cover_all_revision_experiments() -> None:
 
 def test_compact_evidence_has_exact_scientific_coverage() -> None:
     inventory = pd.read_csv(ROOT / "RUN_INVENTORY.csv")
-    assert int(inventory["planned_cells"].sum()) == 136
-    assert int(inventory["passed_cells"].sum()) == 136
+    assert int(inventory["planned_cells"].sum()) == 148
+    assert int(inventory["passed_cells"].sum()) == 148
     assert int(inventory["failed_cells"].sum()) == 0
+    d13_inventory = inventory.loc[inventory["experiment"].eq("D13")]
+    assert len(d13_inventory) == 1
+    assert int(d13_inventory.iloc[0]["planned_cells"]) == 0
+    c2_inventory = inventory.loc[inventory["experiment"].eq("C2")]
+    assert len(c2_inventory) == 1
+    assert int(c2_inventory.iloc[0]["planned_cells"]) == 12
+    assert int(c2_inventory.iloc[0]["passed_cells"]) == 12
+    provenance = json.loads((ROOT / "RUN_PROVENANCE.json").read_text(encoding="utf-8"))
+    assert provenance["scientific_cells"]["planned"] == 148
+    assert provenance["scientific_cells"]["passed"] == 148
+    assert provenance["scientific_cells"]["attribution_and_robustness_cells"]["passed"] == 136
+    assert provenance["scientific_cells"]["c2_city_design_condition_cells"]["passed"] == 12
     cells = pd.read_csv(ROOT / "summary_outputs/matched_cell_metrics.csv")
     assert len(cells) == 136
     assert cells.groupby("experiment").size().to_dict() == {
@@ -252,6 +273,110 @@ def test_common_scale_thermal_figure_package_is_reproducible() -> None:
         ).hexdigest()
 
 
+def test_d13_compact_spatial_trace_package_is_reproducible() -> None:
+    verified = d13.verify_package(ROOT)
+    assert verified == {
+        "status": "PASS",
+        "scenarios": 24,
+        "occupied_rows": 400896,
+        "published_outputs": 6,
+    }
+
+    manifest = pd.read_csv(ROOT / "summary_outputs/d13_input_manifest.csv")
+    scenarios = pd.read_csv(ROOT / "summary_outputs/d13_scenario_summary.csv")
+    groups = pd.read_csv(ROOT / "summary_outputs/d13_group_summary.csv")
+    zones = pd.read_csv(ROOT / "summary_outputs/d13_zone_frequency.csv")
+    parity = pd.read_csv(
+        ROOT / "summary_outputs/d13_reconstruction_validation.csv"
+    )
+    assert len(manifest) == 24
+    assert manifest["trace_sha256_recorded"].eq(
+        manifest["trace_sha256_computed"]
+    ).all()
+    assert len(scenarios) == 24
+    assert (scenarios["unique_selected_zones"] == 15).all()
+    assert len(groups) == 5
+    assert len(zones.loc[zones["scope"].eq("scenario")]) == 360
+    pooled_zones = zones.loc[zones["scope"].eq("all_24_scenarios")]
+    assert len(pooled_zones) == 15
+    assert int(pooled_zones["selected_count"].sum()) == 400896
+    assert int(pooled_zones["warm_protection_selected_count"].sum()) == 43295
+    assert int(parity.iloc[0]["index_mismatch_count"]) == 0
+    assert int(parity.iloc[0]["label_mismatch_count"]) == 0
+
+    values = np.vstack([np.arange(15, dtype=float), np.arange(14, -1, -1)])
+    indices, targets = d13.selector_indices(values)
+    np.testing.assert_array_equal(indices, [13, 1])
+    np.testing.assert_allclose(targets, [12.6, 12.6], rtol=0.0, atol=1e-12)
+    episodes, switches, opportunities = d13.persistence_lengths(
+        np.array([1, 1, 2, 3]), np.array([1, 2, 4, 5])
+    )
+    np.testing.assert_array_equal(episodes, [2, 1, 1])
+    assert switches == 1
+    assert opportunities == 2
+
+    assert not list((ROOT / "diagnostics/d13_spatial_trace").rglob("*.parquet"))
+    assert not list((ROOT / "summary_outputs").glob("d13_*.parquet"))
+
+    provenance = json.loads(
+        (ROOT / "diagnostics/d13_spatial_trace/D13_PUBLIC_PROVENANCE.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    assert provenance["source_diagnostic"]["public_portable_script_sha256"] == hashlib.sha256(
+        D13_PATH.read_bytes()
+    ).hexdigest()
+
+    with tempfile.TemporaryDirectory(prefix="paperb_rev01_public_d13_") as temp_dir:
+        relocated_root = Path(temp_dir) / "revision_01"
+        relocated_script = (
+            relocated_root / "scripts/diagnostics/build_d13_spatial_trace.py"
+        )
+        relocated_script.parent.mkdir(parents=True)
+        shutil.copyfile(D13_PATH, relocated_script)
+        provenance_relative = Path(
+            "diagnostics/d13_spatial_trace/D13_PUBLIC_PROVENANCE.json"
+        )
+        relocated_provenance = relocated_root / provenance_relative
+        relocated_provenance.parent.mkdir(parents=True)
+        shutil.copyfile(ROOT / provenance_relative, relocated_provenance)
+        for relative in provenance["published_outputs"]:
+            source = ROOT / relative
+            target = relocated_root / relative
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(source, target)
+        completed = subprocess.run(
+            [sys.executable, str(relocated_script), "--verify-package"],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        assert json.loads(completed.stdout)["status"] == "PASS"
+
+
+def test_checksum_manifest_covers_public_addendum() -> None:
+    manifest_path = ROOT / "CHECKSUMS_SHA256.txt"
+    records: dict[str, str] = {}
+    for line in manifest_path.read_text(encoding="utf-8").splitlines():
+        digest, relative = line.split(None, 1)
+        records[relative] = digest
+        path = ROOT.parent / relative
+        assert path.is_file(), relative
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == digest, relative
+
+    retained = set()
+    for path in ROOT.rglob("*"):
+        if not path.is_file() or path == manifest_path:
+            continue
+        relative_parts = path.relative_to(ROOT).parts
+        if "__pycache__" in relative_parts or ".pytest_cache" in relative_parts:
+            continue
+        if path.suffix in {".pyc", ".pyo"}:
+            continue
+        retained.add(f"revision_01/{path.relative_to(ROOT).as_posix()}")
+    assert set(records) == retained
+
+
 if __name__ == "__main__":
     test_probability_attenuation_endpoints_and_mass()
     test_spatial_selector_and_adaptive_clamp_contracts()
@@ -260,3 +385,5 @@ if __name__ == "__main__":
     test_weather_archive_matches_frozen_manifest()
     test_primary_cold_diagnostic_has_exact_accepted_panel_coverage()
     test_common_scale_thermal_figure_package_is_reproducible()
+    test_d13_compact_spatial_trace_package_is_reproducible()
+    test_checksum_manifest_covers_public_addendum()
