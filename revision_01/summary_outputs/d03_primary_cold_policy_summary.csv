@@ -1,0 +1,5 @@
+strategy,policy_label,n_scenarios,mean_dh_below_18c,median_dh_below_18c,min_dh_below_18c,max_dh_below_18c,mean_dh_below_16c,median_dh_below_16c,min_dh_below_16c,max_dh_below_16c
+diagnostic_reference,Fixed-setpoint reference,24,6.66909852662,0,0,80.4616795398,1.08885556159,0,0,16.9916097762
+paperb_pmv_relax,Building-mean PMV policy,24,4.32169019217,0,0,56.8111362133,0.621606651198,0,0,11.5563289541
+paperb_adaptive_band_relax,Adaptive-band benchmark,24,8.77071361176,0,0,103.791788575,1.60137101016,0,0,23.6988459951
+paperb_p90_tail_asym_relax,Learned-p90 policy,24,8.31317814073,0,0,100.000521156,1.5072452585,0,0,22.8953067254

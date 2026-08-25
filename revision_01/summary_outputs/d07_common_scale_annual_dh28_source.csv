@@ -1,0 +1,73 @@
+anchor_id,anchor_role,city,scenario,comparator,delta_worst_zone_degree_hours_gt_28c,comparator_label,selector_role_label
+ahmedabad_ssp245_future_extreme,future_extreme,Ahmedabad,ssp245,diagnostic_reference,764.161910864,Fixed-setpoint reference,Late-century-hot-extreme selector role
+ahmedabad_ssp245_present_typical,present_typical,Ahmedabad,ssp245,diagnostic_reference,815.296755003,Fixed-setpoint reference,Present-typical selector role
+ahmedabad_ssp585_future_extreme,future_extreme,Ahmedabad,ssp585,diagnostic_reference,748.99048859,Fixed-setpoint reference,Late-century-hot-extreme selector role
+ahmedabad_ssp585_present_typical,present_typical,Ahmedabad,ssp585,diagnostic_reference,762.53561295,Fixed-setpoint reference,Present-typical selector role
+beijing_ssp245_future_extreme,future_extreme,Beijing,ssp245,diagnostic_reference,106.224173788,Fixed-setpoint reference,Late-century-hot-extreme selector role
+beijing_ssp245_present_typical,present_typical,Beijing,ssp245,diagnostic_reference,22.5864852225,Fixed-setpoint reference,Present-typical selector role
+beijing_ssp585_future_extreme,future_extreme,Beijing,ssp585,diagnostic_reference,104.217944741,Fixed-setpoint reference,Late-century-hot-extreme selector role
+beijing_ssp585_present_typical,present_typical,Beijing,ssp585,diagnostic_reference,8.06275344582,Fixed-setpoint reference,Present-typical selector role
+guangzhou_ssp245_future_extreme,future_extreme,Guangzhou,ssp245,diagnostic_reference,494.289409066,Fixed-setpoint reference,Late-century-hot-extreme selector role
+guangzhou_ssp245_present_typical,present_typical,Guangzhou,ssp245,diagnostic_reference,385.359568946,Fixed-setpoint reference,Present-typical selector role
+guangzhou_ssp585_future_extreme,future_extreme,Guangzhou,ssp585,diagnostic_reference,260.162166468,Fixed-setpoint reference,Late-century-hot-extreme selector role
+guangzhou_ssp585_present_typical,present_typical,Guangzhou,ssp585,diagnostic_reference,395.789109893,Fixed-setpoint reference,Present-typical selector role
+houston_ssp245_future_extreme,future_extreme,Houston,ssp245,diagnostic_reference,317.447922917,Fixed-setpoint reference,Late-century-hot-extreme selector role
+houston_ssp245_present_typical,present_typical,Houston,ssp245,diagnostic_reference,176.825201617,Fixed-setpoint reference,Present-typical selector role
+houston_ssp585_future_extreme,future_extreme,Houston,ssp585,diagnostic_reference,298.148496595,Fixed-setpoint reference,Late-century-hot-extreme selector role
+houston_ssp585_present_typical,present_typical,Houston,ssp585,diagnostic_reference,285.975484794,Fixed-setpoint reference,Present-typical selector role
+kolkata_ssp245_future_extreme,future_extreme,Kolkata,ssp245,diagnostic_reference,725.06969581,Fixed-setpoint reference,Late-century-hot-extreme selector role
+kolkata_ssp245_present_typical,present_typical,Kolkata,ssp245,diagnostic_reference,639.771512312,Fixed-setpoint reference,Present-typical selector role
+kolkata_ssp585_future_extreme,future_extreme,Kolkata,ssp585,diagnostic_reference,537.331516311,Fixed-setpoint reference,Late-century-hot-extreme selector role
+kolkata_ssp585_present_typical,present_typical,Kolkata,ssp585,diagnostic_reference,548.206892902,Fixed-setpoint reference,Present-typical selector role
+phoenix_ssp245_future_extreme,future_extreme,Phoenix,ssp245,diagnostic_reference,384.177633638,Fixed-setpoint reference,Late-century-hot-extreme selector role
+phoenix_ssp245_present_typical,present_typical,Phoenix,ssp245,diagnostic_reference,494.220308662,Fixed-setpoint reference,Present-typical selector role
+phoenix_ssp585_future_extreme,future_extreme,Phoenix,ssp585,diagnostic_reference,267.417969882,Fixed-setpoint reference,Late-century-hot-extreme selector role
+phoenix_ssp585_present_typical,present_typical,Phoenix,ssp585,diagnostic_reference,337.783100112,Fixed-setpoint reference,Present-typical selector role
+ahmedabad_ssp245_future_extreme,future_extreme,Ahmedabad,ssp245,paperb_adaptive_band_relax,-5.31975998208,Adaptive-band benchmark,Late-century-hot-extreme selector role
+ahmedabad_ssp245_present_typical,present_typical,Ahmedabad,ssp245,paperb_adaptive_band_relax,-2.74478914262,Adaptive-band benchmark,Present-typical selector role
+ahmedabad_ssp585_future_extreme,future_extreme,Ahmedabad,ssp585,paperb_adaptive_band_relax,15.1161678679,Adaptive-band benchmark,Late-century-hot-extreme selector role
+ahmedabad_ssp585_present_typical,present_typical,Ahmedabad,ssp585,paperb_adaptive_band_relax,27.0461303328,Adaptive-band benchmark,Present-typical selector role
+beijing_ssp245_future_extreme,future_extreme,Beijing,ssp245,paperb_adaptive_band_relax,0.419355252837,Adaptive-band benchmark,Late-century-hot-extreme selector role
+beijing_ssp245_present_typical,present_typical,Beijing,ssp245,paperb_adaptive_band_relax,0.0244646411981,Adaptive-band benchmark,Present-typical selector role
+beijing_ssp585_future_extreme,future_extreme,Beijing,ssp585,paperb_adaptive_band_relax,0.16225122385,Adaptive-band benchmark,Late-century-hot-extreme selector role
+beijing_ssp585_present_typical,present_typical,Beijing,ssp585,paperb_adaptive_band_relax,2.53144017314,Adaptive-band benchmark,Present-typical selector role
+guangzhou_ssp245_future_extreme,future_extreme,Guangzhou,ssp245,paperb_adaptive_band_relax,19.1045896322,Adaptive-band benchmark,Late-century-hot-extreme selector role
+guangzhou_ssp245_present_typical,present_typical,Guangzhou,ssp245,paperb_adaptive_band_relax,3.50840855579,Adaptive-band benchmark,Present-typical selector role
+guangzhou_ssp585_future_extreme,future_extreme,Guangzhou,ssp585,paperb_adaptive_band_relax,14.3861289807,Adaptive-band benchmark,Late-century-hot-extreme selector role
+guangzhou_ssp585_present_typical,present_typical,Guangzhou,ssp585,paperb_adaptive_band_relax,17.4834987749,Adaptive-band benchmark,Present-typical selector role
+houston_ssp245_future_extreme,future_extreme,Houston,ssp245,paperb_adaptive_band_relax,13.1166401501,Adaptive-band benchmark,Late-century-hot-extreme selector role
+houston_ssp245_present_typical,present_typical,Houston,ssp245,paperb_adaptive_band_relax,13.6754529137,Adaptive-band benchmark,Present-typical selector role
+houston_ssp585_future_extreme,future_extreme,Houston,ssp585,paperb_adaptive_band_relax,9.41497177059,Adaptive-band benchmark,Late-century-hot-extreme selector role
+houston_ssp585_present_typical,present_typical,Houston,ssp585,paperb_adaptive_band_relax,5.97093117999,Adaptive-band benchmark,Present-typical selector role
+kolkata_ssp245_future_extreme,future_extreme,Kolkata,ssp245,paperb_adaptive_band_relax,26.9145928523,Adaptive-band benchmark,Late-century-hot-extreme selector role
+kolkata_ssp245_present_typical,present_typical,Kolkata,ssp245,paperb_adaptive_band_relax,45.1787585545,Adaptive-band benchmark,Present-typical selector role
+kolkata_ssp585_future_extreme,future_extreme,Kolkata,ssp585,paperb_adaptive_band_relax,22.3081717064,Adaptive-band benchmark,Late-century-hot-extreme selector role
+kolkata_ssp585_present_typical,present_typical,Kolkata,ssp585,paperb_adaptive_band_relax,46.4224481283,Adaptive-band benchmark,Present-typical selector role
+phoenix_ssp245_future_extreme,future_extreme,Phoenix,ssp245,paperb_adaptive_band_relax,99.5902216231,Adaptive-band benchmark,Late-century-hot-extreme selector role
+phoenix_ssp245_present_typical,present_typical,Phoenix,ssp245,paperb_adaptive_band_relax,125.236903437,Adaptive-band benchmark,Present-typical selector role
+phoenix_ssp585_future_extreme,future_extreme,Phoenix,ssp585,paperb_adaptive_band_relax,54.7266728023,Adaptive-band benchmark,Late-century-hot-extreme selector role
+phoenix_ssp585_present_typical,present_typical,Phoenix,ssp585,paperb_adaptive_band_relax,38.7013364771,Adaptive-band benchmark,Present-typical selector role
+ahmedabad_ssp245_future_extreme,future_extreme,Ahmedabad,ssp245,paperb_pmv_relax,-6.99392056267,Building-mean PMV policy,Late-century-hot-extreme selector role
+ahmedabad_ssp245_present_typical,present_typical,Ahmedabad,ssp245,paperb_pmv_relax,41.3708761718,Building-mean PMV policy,Present-typical selector role
+ahmedabad_ssp585_future_extreme,future_extreme,Ahmedabad,ssp585,paperb_pmv_relax,-6.70117065854,Building-mean PMV policy,Late-century-hot-extreme selector role
+ahmedabad_ssp585_present_typical,present_typical,Ahmedabad,ssp585,paperb_pmv_relax,68.2430219564,Building-mean PMV policy,Present-typical selector role
+beijing_ssp245_future_extreme,future_extreme,Beijing,ssp245,paperb_pmv_relax,-4.92627310494,Building-mean PMV policy,Late-century-hot-extreme selector role
+beijing_ssp245_present_typical,present_typical,Beijing,ssp245,paperb_pmv_relax,-1.25972811677,Building-mean PMV policy,Present-typical selector role
+beijing_ssp585_future_extreme,future_extreme,Beijing,ssp585,paperb_pmv_relax,-9.49777665783,Building-mean PMV policy,Late-century-hot-extreme selector role
+beijing_ssp585_present_typical,present_typical,Beijing,ssp585,paperb_pmv_relax,1.05025392452,Building-mean PMV policy,Present-typical selector role
+guangzhou_ssp245_future_extreme,future_extreme,Guangzhou,ssp245,paperb_pmv_relax,-4.77259411442,Building-mean PMV policy,Late-century-hot-extreme selector role
+guangzhou_ssp245_present_typical,present_typical,Guangzhou,ssp245,paperb_pmv_relax,-6.79126810681,Building-mean PMV policy,Present-typical selector role
+guangzhou_ssp585_future_extreme,future_extreme,Guangzhou,ssp585,paperb_pmv_relax,-41.9686658457,Building-mean PMV policy,Late-century-hot-extreme selector role
+guangzhou_ssp585_present_typical,present_typical,Guangzhou,ssp585,paperb_pmv_relax,18.6739914743,Building-mean PMV policy,Present-typical selector role
+houston_ssp245_future_extreme,future_extreme,Houston,ssp245,paperb_pmv_relax,8.13821936959,Building-mean PMV policy,Late-century-hot-extreme selector role
+houston_ssp245_present_typical,present_typical,Houston,ssp245,paperb_pmv_relax,4.90844053401,Building-mean PMV policy,Present-typical selector role
+houston_ssp585_future_extreme,future_extreme,Houston,ssp585,paperb_pmv_relax,-8.55979642395,Building-mean PMV policy,Late-century-hot-extreme selector role
+houston_ssp585_present_typical,present_typical,Houston,ssp585,paperb_pmv_relax,-6.17726123314,Building-mean PMV policy,Present-typical selector role
+kolkata_ssp245_future_extreme,future_extreme,Kolkata,ssp245,paperb_pmv_relax,17.039550409,Building-mean PMV policy,Late-century-hot-extreme selector role
+kolkata_ssp245_present_typical,present_typical,Kolkata,ssp245,paperb_pmv_relax,39.95223508,Building-mean PMV policy,Present-typical selector role
+kolkata_ssp585_future_extreme,future_extreme,Kolkata,ssp585,paperb_pmv_relax,-12.4782450051,Building-mean PMV policy,Late-century-hot-extreme selector role
+kolkata_ssp585_present_typical,present_typical,Kolkata,ssp585,paperb_pmv_relax,40.2760718303,Building-mean PMV policy,Present-typical selector role
+phoenix_ssp245_future_extreme,future_extreme,Phoenix,ssp245,paperb_pmv_relax,47.672524082,Building-mean PMV policy,Late-century-hot-extreme selector role
+phoenix_ssp245_present_typical,present_typical,Phoenix,ssp245,paperb_pmv_relax,69.9240066876,Building-mean PMV policy,Present-typical selector role
+phoenix_ssp585_future_extreme,future_extreme,Phoenix,ssp585,paperb_pmv_relax,-11.6119246076,Building-mean PMV policy,Late-century-hot-extreme selector role
+phoenix_ssp585_present_typical,present_typical,Phoenix,ssp585,paperb_pmv_relax,51.7157611035,Building-mean PMV policy,Present-typical selector role

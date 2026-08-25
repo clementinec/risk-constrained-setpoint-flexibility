@@ -1,0 +1,4 @@
+comparator,comparator_label,n_scenarios,mean_delta_dh_above_28c,median_delta_dh_above_28c,min_delta_dh_above_28c,max_delta_dh_above_28c,lower_count,near_zero_count,higher_count
+diagnostic_reference,Fixed-setpoint reference,24,411.668838105,384.768601292,8.06275344582,815.296755003,0,0,24
+paperb_pmv_relax,Building-mean PMV policy,24,11.9677636744,-0.104737096125,-41.9686658457,69.9240066876,12,0,12
+paperb_adaptive_band_relax,Adaptive-band benchmark,24,24.7072911627,14.7511484243,-5.31975998208,125.236903437,2,1,21

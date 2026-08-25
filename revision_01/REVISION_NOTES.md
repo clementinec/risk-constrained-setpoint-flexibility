@@ -12,6 +12,13 @@ Date: 2026-08-25
 - Exact selected-weather archive: 24/24 native EPWs published with matching
   accepted-run SHA-256 values, path-free selector metadata, recovered source
   lineage, daily-delta metadata, citations, and a CC BY 4.0 data notice.
+- Accepted-panel cold-side diagnostic D03: 96/96 hash-pinned traces reproduced,
+  covering all 24 anchors and the four primary policies; CSV/Parquet parity and
+  independent checks against the active-policy synthesis both passed. This
+  diagnostic reuses accepted outputs and adds no EnergyPlus runs.
+- Common-scale annual thermal diagnostic D07: 72/72 primary annual contrasts
+  reproduced the published three-comparator means and generated the packaged
+  supplemental PDF from inspectable CSV source data.
 - City-specific design-day sensitivity C2: not run. The retained panel did not
   provide simultaneous component-binding evidence or authoritative city-specific
   design-day files sufficient to authorize the predeclared sensitivity.
@@ -68,6 +75,22 @@ manuscript-facing learned-p90-minus-alternative convention for M4/M5.
    occupied request branches (6.011%), which triggered the 24-cell closed-loop
    C1 batch. Across the matched full grid, clamping changed mean delivered site
    energy by +0.036% and mean worst-zone degree-hours above 28 C by +0.845 C h.
+
+7. **Cold-side exposure was sparse in the accepted four-policy panel.** Median
+   worst-zone occupied degree-hours below both 18 and 16 C were zero for every
+   policy. Mean values below 18 C were 6.669 for fixed setpoints, 4.322 for
+   building-mean PMV, 8.771 for the adaptive-band benchmark, and 8.313 for
+   learned p90. Learned p90 minus fixed, PMV, and adaptive changed the mean by
+   +1.644, +3.991, and -0.458 C h, respectively; the corresponding lower/near-
+   zero/higher direction counts were 1/19/4, 0/19/5, and 5/19/0. The secondary
+   16 C screen showed the same sparse pattern with smaller magnitudes.
+
+8. **The common-scale figure preserves the absolute annual >28 C comparison.**
+   The displayed learned-p90-minus-comparator means are +411.669 C h versus
+   fixed setpoints, +11.968 C h versus building-mean PMV, and +24.707 C h versus
+   the adaptive-band benchmark. All 24 scenario values per comparator share one
+   horizontal scale; the CSV source and portable plotting script are packaged
+   alongside the PDF.
 
 ## Interpretation boundaries
 

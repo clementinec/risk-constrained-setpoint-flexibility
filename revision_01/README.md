@@ -3,7 +3,8 @@
 This directory is the lightweight reproducibility addendum for the first
 revision of *Delivered-Energy and Operative-Temperature Trade-offs for
 Learned-Probability-Informed HVAC Supervision in a Weather Stress Grid*. It
-records the matched supervisory-policy tests added in response to peer review.
+records the matched supervisory-policy tests and compact accepted-panel
+diagnostics added in response to peer review.
 
 The revision executed 136 new annual EnergyPlus cells: 64 core cells (M1--M3),
 24 adaptive running-mean clamp cells (C1), and 48 full-grid learned-contribution
@@ -35,8 +36,14 @@ causal estimate of a future-climate effect.
 - `scripts/validation/`: exact accepted-cell output validator used by the batches.
 - `scripts/synthesis/`: exact reviewer-evidence and learned-contribution synthesis
   scripts.
-- `summary_outputs/`: compact CSV evidence only: 136 matched cell rows, grouped
-  summaries, M4/M5 branch transitions, metric definitions, and reviewer mapping.
+- `scripts/figures/`: portable script for regenerating the supplemental
+  common-scale annual thermal figure from packaged CSV inputs.
+- `summary_outputs/`: compact CSV evidence only: 136 matched rerun-cell rows,
+  accepted-panel cold-side metrics and paired contrasts, common-scale annual
+  thermal source data, grouped summaries, M4/M5 branch transitions, metric
+  definitions, and reviewer mapping.
+- `figures/`: the common-scale annual worst-zone degree-hour figure regenerated
+  from the packaged D07 source and summary tables.
 - `weather/`: the exact 24 native EPW inputs, a path-free weather manifest,
   recovered source-lineage and daily-delta metadata, and the weather-data
   licence and citations.
@@ -79,6 +86,27 @@ local input paths.
   contrasts.
 - `summary_outputs/feedback_branch_outcome_transitions.csv`: M4/M5 branch and
   action-outcome transition counts.
+- `summary_outputs/d03_primary_cold_cell_metrics.csv`: accepted 96-cell,
+  four-policy cold-side degree-hour metrics at 18 and 16 C; these are derived
+  diagnostics and do not add EnergyPlus runs.
+- `summary_outputs/d03_primary_cold_paired_cells.csv`: 72 scenario-level
+  learned-p90-minus-comparator cold-side contrasts.
+- `summary_outputs/d03_primary_cold_policy_summary.csv` and
+  `d03_primary_cold_paired_summary.csv`: policy-level and paired cold-side
+  summaries used in the revised manuscript and Supplement.
+- `summary_outputs/d07_common_scale_annual_dh28_source.csv`: 72 accepted-panel
+  annual learned-p90-minus-comparator values displayed on one horizontal scale.
+- `summary_outputs/d07_common_scale_annual_dh28_summary.csv`: the corresponding
+  three-comparator summary.
+- `scripts/figures/plot_common_scale_annual_dh28.py`: regenerates
+  `figures/fig_s_common_scale_annual_dh28.pdf` using only those two packaged D07
+  CSV files.
+
+From the repository root, regenerate the supplemental figure with:
+
+```sh
+python3 revision_01/scripts/figures/plot_common_scale_annual_dh28.py
+```
 
 Sign conventions differ deliberately between two entry points. The all-experiment
 `matched_experiment_variant_summary.csv` records each newly run variant minus its
