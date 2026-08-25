@@ -1,0 +1,88 @@
+{
+  "schema_version": "paperb_enb_rev01_storage_mapping_v1",
+  "status": "adopted_pre_execution",
+  "shared_once_per_batch": [
+    "runner_and_launcher",
+    "predictor_bundle",
+    "metrics_and_preprocessing_identity",
+    "base_idf_and_design_days",
+    "weather_files",
+    "environment_identity",
+    "compiled_cell_matrix"
+  ],
+  "per_cell": {
+    "configuration": {
+      "format": "json",
+      "retention": "native"
+    },
+    "state_and_logs": {
+      "formats": [
+        "jsonl",
+        "txt"
+      ],
+      "retention": "native"
+    },
+    "annual_trace": {
+      "format": "parquet",
+      "compression": "zstd_level_7",
+      "row_group_size": 8192,
+      "page_checksum": true,
+      "creation": "write_native_no_csv_intermediate"
+    },
+    "energyplus_sql": {
+      "format": "sqlite",
+      "retention": "native"
+    },
+    "energyplus_native_evidence": {
+      "formats": [
+        "err",
+        "eio",
+        "end",
+        "eso",
+        "mtr",
+        "rdd",
+        "mdd"
+      ],
+      "retention": "native"
+    },
+    "energyplus_csv_to_parquet": {
+      "allowlist": [
+        "eplusout.csv",
+        "eplusmtr.csv",
+        "eplustbl.csv",
+        "epluszsz.csv",
+        "eplusssz.csv"
+      ],
+      "ragged_allowlist": [
+        "eplustbl.csv",
+        "epluszsz.csv",
+        "eplusssz.csv"
+      ],
+      "compression": "zstd_level_3",
+      "row_group_size": 65536,
+      "page_checksum": true,
+      "source_removal": "only_after_separate_passing_finalize"
+    },
+    "compact_audits_and_summaries": {
+      "formats": [
+        "csv",
+        "json"
+      ],
+      "retention": "native"
+    }
+  },
+  "batch_level": {
+    "cell_index": "parquet",
+    "outcome_index": "parquet",
+    "file_manifest": "parquet",
+    "append_only_journals": "jsonl",
+    "closures": "json"
+  },
+  "forbidden": [
+    "per_cell_predictor_copy",
+    "arbitrary_recursive_csv_conversion",
+    "mutation_of_accepted_fresh96",
+    "mutation_of_completed_smoke_roots",
+    "overwrite_or_resume_of_closed_batches"
+  ]
+}

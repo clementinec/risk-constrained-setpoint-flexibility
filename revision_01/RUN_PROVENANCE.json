@@ -1,0 +1,76 @@
+{
+  "schema_version": "paperb_enb_rev01_public_provenance_v1",
+  "date": "2026-08-25",
+  "scientific_cells": {
+    "planned": 136,
+    "passed": 136,
+    "failed": 0
+  },
+  "technical_parity_sentinel": {
+    "count": 1,
+    "status": "PASS",
+    "closure_sha256": "ca88141bfdf9344bd20ce138eee32f35d88f3f1d38b35d89bcf799710100326f"
+  },
+  "batches": {
+    "rev01_core64": {
+      "experiments": ["M1", "M2", "M3"],
+      "planned": 64,
+      "passed": 64,
+      "failed": 0,
+      "matrix_sha256": "1853c5ac0658a905cb80280396575f6ac4777fd3d2eee260f174f1f410f1f662",
+      "variant_manifest_sha256": "8daf357be8683346aec533b2a9b5489d32c7a3b39a658c34bbcf383ce703cadf",
+      "batch_closure_sha256": "cec9aedde5757dc9b2d4a2a1ed2285b821dca8a898d35efa3e75f37cf0424423",
+      "executed_launcher_sha256": "28a01045f1ebfb94d6919d2106fa2b81b69514f5174a2d7bfdc929e1bfeb881e"
+    },
+    "rev01_adaptive24": {
+      "experiments": ["C1"],
+      "planned": 24,
+      "passed": 24,
+      "failed": 0,
+      "matrix_sha256": "14d3075d83d7e688f39677c2f02ed21b083b8a30c08df02b90425f976d524ac9",
+      "variant_manifest_sha256": "8daf357be8683346aec533b2a9b5489d32c7a3b39a658c34bbcf383ce703cadf",
+      "batch_closure_sha256": "41df9ca813f09cf0e1736ec82ff4303f3c102abbcaa1bd88707b6f39d2a901c0",
+      "executed_launcher_sha256": "28a01045f1ebfb94d6919d2106fa2b81b69514f5174a2d7bfdc929e1bfeb881e"
+    },
+    "rev01_learned48": {
+      "experiments": ["M4", "M5"],
+      "planned": 48,
+      "passed": 48,
+      "failed": 0,
+      "matrix_sha256": "c38576e1a0dd70a4df2dd09e033a9bdd70c04f0446929570fd01e9bee14776dd",
+      "variant_manifest_sha256": "2ba95c3fd5a3d46c2bb17e0286868913528526b36f5b2175ce2b37880b4478e2",
+      "batch_closure_sha256": "abf5ced68ed5401a5b783eb151574061b760da74c3dbb78c82f93fd4dbaa2676",
+      "executed_launcher_sha256": "aeaa76b0294661313bc57657a9980b621775f7f0a47a89ff8f4672d65693c87e"
+    }
+  },
+  "frozen_code": {
+    "runner_sha256": "4c061fc3b25f7ee6fe66df00cfacfab42f1d3ab171185306fe1ce161a84a0baf",
+    "runner_helper_sha256": "b941c0bfc4beb3dc44557ed341bb4e018992620b0d3ad4f3bcb6973558d78bf7",
+    "latest_batch_launcher_sha256": "aeaa76b0294661313bc57657a9980b621775f7f0a47a89ff8f4672d65693c87e",
+    "accepted_output_validator_sha256": "ab7968640f22d91d4ba44c8b0ca874cbdbbfc1c0f2d9700ba2fd95d7ebfe62d0",
+    "storage_module_sha256": "b30e96238e8c5c443350c2250fb379a37292ac06caaff98073a4b2bf92b74448",
+    "storage_mapping_sha256": "40d8b59cd2f2085bef8aafe16634fe1364c2aa5f317e0e62986c83aca5b65238",
+    "synthesis_script_sha256": "24946fb0adaebbbb59eb5b42cb7c80412e74cf473f5622ac40a5dd260a36412b",
+    "learned_assessment_script_sha256": "e2f364b650db4e513c90117753cfe52fb6f2e2a6c705bb5695345ee5e88a8f1e"
+  },
+  "external_input_hashes": {
+    "accepted_96_cell_matrix_sha256": "fa03767f0c3d581e65e00ff6149546c44fe3e936608da73ad2f5485bf19895e0",
+    "accepted_parent_runner_sha256": "a9693042883ed5c20edad6fcbc757c62c7216d5abc120ad18de1a003932848a4",
+    "accepted_medium_office_idf_sha256": "1144b58b848992d1730e49ef9c252569e3a515d82a2f99b2c0233352f625a7e4",
+    "trained_predictor_sha256": "6fbeb06644a36b226b17824a1fca7526bd518e0a9b76a41f878fb1c27efcd619"
+  },
+  "synthesis": {
+    "reviewer_evidence_schema": "paperb_enb_rev01_reviewer_synthesis_v2",
+    "reviewer_evidence_closure_sha256": "703da705aa821642a91b2ed6cd4fcf3ad45127b09c3a62eee5f1609c2253c0d1",
+    "learned_contribution_assessment_closure_sha256": "3752c320e422aa6aaa95e9708c9c07cc1bd197324ffd19daa5bcd1160a53e5c9"
+  },
+  "not_redistributed": [
+    "local-path-bearing run matrices and closures",
+    "source weather archives and EPW files",
+    "EnergyPlus SQL, EIO, and working directories",
+    "timestep traces",
+    "trained predictor binary",
+    "third-party thermal-comfort records"
+  ]
+}
+

@@ -1,0 +1,370 @@
+{
+  "parent_runner_sha256": "a9693042883ed5c20edad6fcbc757c62c7216d5abc120ad18de1a003932848a4",
+  "schema_version": "paperb_enb_rev01_variant_manifest_v1",
+  "variants": {
+    "rev01_adaptive_rm_clamp_10_33p5": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "accepted_denver",
+        "spatial_quantile": 0.9,
+        "strategy": "paperb_adaptive_band_clamped_relax",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "mode": "accepted_denver",
+        "source_idf_sha256": "1144b58b848992d1730e49ef9c252569e3a515d82a2f99b2c0233352f625a7e4"
+      },
+      "strategy": "paperb_adaptive_band_clamped_relax"
+    },
+    "rev01_p90_abs_pmv_relax": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "accepted_denver",
+        "spatial_quantile": 0.9,
+        "strategy": "paperb_p90_abs_pmv_relax",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "mode": "accepted_denver",
+        "source_idf_sha256": "1144b58b848992d1730e49ef9c252569e3a515d82a2f99b2c0233352f625a7e4"
+      },
+      "strategy": "paperb_p90_abs_pmv_relax"
+    },
+    "rev01_p90_bounds19_27": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 27.0,
+        "save_heat_c": 19.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "accepted_denver",
+        "spatial_quantile": 0.9,
+        "strategy": "paperb_p90_tail_asym_relax",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "mode": "accepted_denver",
+        "source_idf_sha256": "1144b58b848992d1730e49ef9c252569e3a515d82a2f99b2c0233352f625a7e4"
+      },
+      "strategy": "paperb_p90_tail_asym_relax"
+    },
+    "rev01_p90_bounds21_25": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 25.0,
+        "save_heat_c": 21.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "accepted_denver",
+        "spatial_quantile": 0.9,
+        "strategy": "paperb_p90_tail_asym_relax",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "mode": "accepted_denver",
+        "source_idf_sha256": "1144b58b848992d1730e49ef9c252569e3a515d82a2f99b2c0233352f625a7e4"
+      },
+      "strategy": "paperb_p90_tail_asym_relax"
+    },
+    "rev01_p90_dtail005": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.05,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "accepted_denver",
+        "spatial_quantile": 0.9,
+        "strategy": "paperb_p90_tail_asym_relax",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "mode": "accepted_denver",
+        "source_idf_sha256": "1144b58b848992d1730e49ef9c252569e3a515d82a2f99b2c0233352f625a7e4"
+      },
+      "strategy": "paperb_p90_tail_asym_relax"
+    },
+    "rev01_p90_dtail015": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.15,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "accepted_denver",
+        "spatial_quantile": 0.9,
+        "strategy": "paperb_p90_tail_asym_relax",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "mode": "accepted_denver",
+        "source_idf_sha256": "1144b58b848992d1730e49ef9c252569e3a515d82a2f99b2c0233352f625a7e4"
+      },
+      "strategy": "paperb_p90_tail_asym_relax"
+    },
+    "rev01_p90_ptail015": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "accepted_denver",
+        "spatial_quantile": 0.9,
+        "strategy": "paperb_p90_tail_asym_relax",
+        "tail_threshold": 0.15,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "mode": "accepted_denver",
+        "source_idf_sha256": "1144b58b848992d1730e49ef9c252569e3a515d82a2f99b2c0233352f625a7e4"
+      },
+      "strategy": "paperb_p90_tail_asym_relax"
+    },
+    "rev01_p90_ptail025": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "accepted_denver",
+        "spatial_quantile": 0.9,
+        "strategy": "paperb_p90_tail_asym_relax",
+        "tail_threshold": 0.25,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "mode": "accepted_denver",
+        "source_idf_sha256": "1144b58b848992d1730e49ef9c252569e3a515d82a2f99b2c0233352f625a7e4"
+      },
+      "strategy": "paperb_p90_tail_asym_relax"
+    },
+    "rev01_p90_q075": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "accepted_denver",
+        "spatial_quantile": 0.75,
+        "strategy": "paperb_p90_tail_asym_relax",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "mode": "accepted_denver",
+        "source_idf_sha256": "1144b58b848992d1730e49ef9c252569e3a515d82a2f99b2c0233352f625a7e4"
+      },
+      "strategy": "paperb_p90_tail_asym_relax"
+    },
+    "rev01_p90_q100": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "accepted_denver",
+        "spatial_quantile": 1.0,
+        "strategy": "paperb_p90_tail_asym_relax",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "mode": "accepted_denver",
+        "source_idf_sha256": "1144b58b848992d1730e49ef9c252569e3a515d82a2f99b2c0233352f625a7e4"
+      },
+      "strategy": "paperb_p90_tail_asym_relax"
+    },
+    "rev01_p90_signal_a000": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 0.0,
+        "sizing_contract": "accepted_denver",
+        "spatial_quantile": 0.9,
+        "strategy": "paperb_p90_tail_asym_relax",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "mode": "accepted_denver",
+        "source_idf_sha256": "1144b58b848992d1730e49ef9c252569e3a515d82a2f99b2c0233352f625a7e4"
+      },
+      "strategy": "paperb_p90_tail_asym_relax"
+    },
+    "rev01_p90_signal_a050": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 0.5,
+        "sizing_contract": "accepted_denver",
+        "spatial_quantile": 0.9,
+        "strategy": "paperb_p90_tail_asym_relax",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "mode": "accepted_denver",
+        "source_idf_sha256": "1144b58b848992d1730e49ef9c252569e3a515d82a2f99b2c0233352f625a7e4"
+      },
+      "strategy": "paperb_p90_tail_asym_relax"
+    },
+    "rev01_parity_submitted_p90": {
+      "effective_config": {
+        "adaptive_rm_clamp_high_c": 33.5,
+        "adaptive_rm_clamp_low_c": 10.0,
+        "asym_threshold": 0.1,
+        "cold_protect_heat_c": 23.25,
+        "controller_semantics": "corrected",
+        "inference_preprocessing": "training_contract",
+        "paperb_met": 0.854333,
+        "people_activity_w_per_person": 93.2,
+        "pmv_threshold": 0.5,
+        "relax_dwell_steps": 1,
+        "save_cool_c": 26.0,
+        "save_heat_c": 20.0,
+        "signal_alpha": 1.0,
+        "sizing_contract": "accepted_denver",
+        "spatial_quantile": 0.9,
+        "strategy": "paperb_p90_tail_asym_relax",
+        "tail_threshold": 0.2,
+        "tighten_dwell_steps": 4,
+        "warm_protect_cool_c": 23.25
+      },
+      "sizing": {
+        "mode": "accepted_denver",
+        "source_idf_sha256": "1144b58b848992d1730e49ef9c252569e3a515d82a2f99b2c0233352f625a7e4"
+      },
+      "strategy": "paperb_p90_tail_asym_relax"
+    }
+  }
+}

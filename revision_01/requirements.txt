@@ -1,0 +1,10 @@
+numpy
+pandas
+pyarrow
+matplotlib
+scikit-learn
+lightgbm
+joblib
+pythermalcomfort
+pytest
+
