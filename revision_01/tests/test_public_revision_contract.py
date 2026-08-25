@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import importlib.util
 import json
 from pathlib import Path
@@ -79,8 +80,51 @@ def test_compact_evidence_has_exact_scientific_coverage() -> None:
     }
 
 
+def test_weather_archive_matches_frozen_manifest() -> None:
+    manifest = pd.read_csv(
+        ROOT / "weather/weather_manifest.csv", keep_default_na=False
+    )
+    assert len(manifest) == 24
+    assert manifest["archive_relative_path"].nunique() == 24
+    assert manifest["anchor_id"].nunique() == 24
+    assert manifest.groupby("scenario").size().to_dict() == {
+        "ssp245": 12,
+        "ssp585": 12,
+    }
+    assert manifest.groupby("anchor_role").size().to_dict() == {
+        "future_extreme": 12,
+        "present_typical": 12,
+    }
+    assert set(manifest["gcm"]) == {"MPI-ESM1-2-LR"}
+    assert set(manifest["rcm"]) == {"N/A"}
+
+    for row in manifest.itertuples(index=False):
+        path = ROOT / row.archive_relative_path
+        assert path.is_file(), path
+        assert path.stat().st_size == int(row.size_bytes), path
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == row.sha256, path
+        with path.open(encoding="utf-8") as stream:
+            hour_records = sum(1 for _ in stream) - 8
+        assert hour_records == int(row.epw_hour_records), path
+
+    lineage = pd.read_csv(
+        ROOT / "weather/provenance/source_lineage_manifest.csv",
+        keep_default_na=False,
+    )
+    deltas = pd.read_csv(
+        ROOT / "weather/provenance/climate_delta_metadata_48.csv"
+    )
+    assert len(lineage) == 12
+    assert len(deltas) == 48
+    assert lineage.groupby("scenario").size().to_dict() == {
+        "ssp245": 6,
+        "ssp585": 6,
+    }
+
+
 if __name__ == "__main__":
     test_probability_attenuation_endpoints_and_mass()
     test_spatial_selector_and_adaptive_clamp_contracts()
     test_public_manifests_cover_all_revision_experiments()
     test_compact_evidence_has_exact_scientific_coverage()
+    test_weather_archive_matches_frozen_manifest()

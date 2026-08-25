@@ -37,22 +37,29 @@ causal estimate of a future-climate effect.
   scripts.
 - `summary_outputs/`: compact CSV evidence only: 136 matched cell rows, grouped
   summaries, M4/M5 branch transitions, metric definitions, and reviewer mapping.
+- `weather/`: the exact 24 native EPW inputs, a path-free weather manifest,
+  recovered source-lineage and daily-delta metadata, and the weather-data
+  licence and citations.
 - `RUN_INVENTORY.csv`: human-readable M1--M5/C1 execution inventory.
 - `RUN_PROVENANCE.json`: portable hashes and closure status without workstation
   paths.
 - `REVISION_NOTES.md`: main findings and interpretation boundaries.
 - `CHECKSUMS_SHA256.txt`: hashes of every other retained file in this addendum.
 
-## Reproduction inputs not redistributed
+## Reproduction inputs and exclusions
+
+The package now includes the exact 24 EPWs used by the accepted panel and every
+Revision 01 rerun. `weather/weather_manifest.csv` gives their path-free scenario
+roles, sizes, full-file hashes, retained payload hashes, and recovered lineage.
+The broader 2025--2100 forecast tables and source workbooks are not redistributed;
+their path-free filenames and hashes are retained in
+`weather/provenance/source_lineage_manifest.csv`.
 
 The package does not include EnergyPlus working directories, SQL/EIO files,
-timestep traces, source weather archives or EPW files, the trained model binary,
-the third-party thermal-comfort database, or local-path-bearing frozen run
-matrices and closures. The model, accepted Medium Office IDF, weather files, and
-accepted 96-cell comparator panel must be supplied separately. The listed model,
-IDF, accepted-matrix, and runner hashes must match `RUN_PROVENANCE.json`; weather
-identity is validated through the externally supplied accepted matrix and generated
-run plan.
+timestep traces, the trained model binary, the accepted Medium Office IDF, the
+third-party thermal-comfort database, or local-path-bearing frozen run matrices
+and closures. The model, IDF, and accepted 96-cell comparator panel must still be
+supplied separately. Their hashes must match `RUN_PROVENANCE.json`.
 
 The exact scripts retain generic macOS defaults for EnergyPlus 25.1 and temporary
 cache directories. For another installation, provide all CLI paths explicitly.

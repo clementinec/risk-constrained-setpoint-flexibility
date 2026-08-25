@@ -9,6 +9,9 @@ Date: 2026-08-25
 - Full-grid learned-contribution batch: 48/48 PASS (M4: 24; M5: 24).
 - Total scientific coverage: 136/136 PASS, with zero failed cells.
 - Separate submitted-settings annual parity sentinel: PASS.
+- Exact selected-weather archive: 24/24 native EPWs published with matching
+  accepted-run SHA-256 values, path-free selector metadata, recovered source
+  lineage, daily-delta metadata, citations, and a CC BY 4.0 data notice.
 - City-specific design-day sensitivity C2: not run. The retained panel did not
   provide simultaneous component-binding evidence or authoritative city-specific
   design-day files sufficient to authorize the predeclared sensitivity.

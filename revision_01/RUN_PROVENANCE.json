@@ -1,5 +1,5 @@
 {
-  "schema_version": "paperb_enb_rev01_public_provenance_v1",
+  "schema_version": "paperb_enb_rev01_public_provenance_v2",
   "date": "2026-08-25",
   "scientific_cells": {
     "planned": 136,
@@ -59,6 +59,33 @@
     "accepted_medium_office_idf_sha256": "1144b58b848992d1730e49ef9c252569e3a515d82a2f99b2c0233352f625a7e4",
     "trained_predictor_sha256": "6fbeb06644a36b226b17824a1fca7526bd518e0a9b76a41f878fb1c27efcd619"
   },
+  "weather_archive": {
+    "epw_count": 24,
+    "city_count": 6,
+    "scenario_count": 2,
+    "selector_roles": ["present_typical", "future_extreme"],
+    "gcm": "MPI-ESM1-2-LR",
+    "rcm": "N/A",
+    "reference_period": "1991-2010",
+    "delta_mode": "daily",
+    "manifest": "weather/weather_manifest.csv",
+    "source_lineage_manifest": "weather/provenance/source_lineage_manifest.csv",
+    "climate_delta_metadata": "weather/provenance/climate_delta_metadata_48.csv",
+    "full_file_hash_status": "24/24 match accepted frozen run inputs",
+    "source_dataset_dois": {
+      "ssp245": "10.22033/ESGF/CMIP6.6693",
+      "ssp585": "10.22033/ESGF/CMIP6.6705"
+    },
+    "license": "CC BY 4.0; see weather/WEATHER_DATA_LICENSE.md",
+    "unrecovered_fields": [
+      "CMIP6 member/variant",
+      "native grid",
+      "source dataset version",
+      "exact observational station identifiers",
+      "independent solar-completion lineage",
+      "complete field-by-field generation specification"
+    ]
+  },
   "synthesis": {
     "reviewer_evidence_schema": "paperb_enb_rev01_reviewer_synthesis_v2",
     "reviewer_evidence_closure_sha256": "703da705aa821642a91b2ed6cd4fcf3ad45127b09c3a62eee5f1609c2253c0d1",
@@ -66,11 +93,10 @@
   },
   "not_redistributed": [
     "local-path-bearing run matrices and closures",
-    "source weather archives and EPW files",
+    "2025-2100 source forecast tables and source workbooks",
     "EnergyPlus SQL, EIO, and working directories",
     "timestep traces",
     "trained predictor binary",
     "third-party thermal-comfort records"
   ]
 }
-
